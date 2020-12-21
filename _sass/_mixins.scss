@@ -1,0 +1,58 @@
+/***** RESPONSIVE HELPERS *****/
+
+// Shortened bootstrap mixins for our set device-breakpoints
+
+@mixin bp-mobile-up() {
+    @include media-breakpoint-up($bp--mobile) {
+        @content;
+    }
+}
+
+@mixin bp-mobile-down() {
+    @include media-breakpoint-down($bp--mobile) {
+        @content;
+    }
+}
+@mixin bp-tablet-up() {
+    @include media-breakpoint-up($bp--tablet) {
+        @content;
+    }
+}
+@mixin bp-tablet-down() {
+    @include media-breakpoint-down($bp--tablet) {
+        @content;
+    }
+}
+@mixin bp-laptop-up() {
+    @include media-breakpoint-up($bp--laptop) {
+        @content;
+    }
+}
+@mixin bp-laptop-down() {
+    @include media-breakpoint-down($bp--laptop) {
+        @content;
+    }
+}
+@mixin bp-desktop-up() {
+    @include media-breakpoint-up($bp--desktop) {
+        @content;
+    }
+}
+@mixin bp-desktop-down() {
+    @include media-breakpoint-down($bp--desktop) {
+        @content;
+    }
+}
+
+// Quicker way to selectively display-none for devices
+@mixin mobile-hidden() {
+    @include bp-mobile-down {
+        display: none;
+    }
+}
+
+@mixin mobile-only() {
+    @include bp-tablet-up {
+        display: none;
+    }
+}

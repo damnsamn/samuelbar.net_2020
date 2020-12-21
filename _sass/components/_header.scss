@@ -1,0 +1,51 @@
+.header {
+    height: $height__header--mobile;
+    position: relative;
+
+    @include bp-tablet-up {
+        height: $height__header--desktop;
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        background: $color--white;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 2px;
+    }
+
+    > .container {
+        position: relative;
+        display: flex;
+        height: 100%;
+    }
+
+    &__logo {
+        position: relative;
+        display: inline-block;
+        display: flex;
+        align-items: center;
+
+        &::before {
+            content: "";
+            display: block;
+            background: $color--white;
+
+            position: absolute;
+            right: 0;
+            left: -50vw;
+            top: 0;
+            bottom: 0;
+        }
+
+        a {
+            z-index: 1;
+            display: inline-block;
+            margin-right: $spacer--32;
+        }
+    }
+}
