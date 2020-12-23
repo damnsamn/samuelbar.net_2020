@@ -1,0 +1,47 @@
+.intro {
+    @include component-margin(top);
+    @include component-margin(bottom);
+
+    .content-column + .content-column {
+        margin-top: $spacer--48;
+    }
+
+    &__header {
+        display: flex;
+        @include bp-mobile-down {
+            flex-wrap: wrap;
+            justify-content: center;
+            text-align: center;
+        }
+    }
+    &__image {
+        img {
+            height: auto;
+            max-width: 100%;
+        }
+        @include bp-mobile-down {
+            order: 1;
+            margin-top: $spacer--32;
+        }
+        @include bp-tablet-up {
+        }
+    }
+    &__content {
+        flex: 1 0 auto;
+        margin-left: $spacer--64;
+
+        @include bp-mobile-down {
+            width: 100%;
+            margin: 0;
+        }
+    }
+
+    &__heading {
+        margin-top: 0;
+        margin-bottom: $spacer--12;
+    }
+    &__title {
+        margin: 0;
+        font-weight: $font-weight--regular;
+    }
+}

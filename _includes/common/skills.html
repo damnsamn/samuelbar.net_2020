@@ -1,0 +1,18 @@
+<div class="skills row">
+    <div class="content-column">
+        <h2>Skills</h2>
+
+        <p>Below is a non-exhaustive list of some of the skills and technologies I’ve picked up over the years, between graphic design, UX, and web development.</p>
+
+        <ul class="skills__list">
+            {% for skill in site.skills %}
+            <li class="skills__item">
+                <span class="sr-only">{{skill.name}}</span>
+                <a href="{{skill.href}}">
+                    <img src="{{skill.src}}" alt="Visit the {{skill.name}} website" title="{{skill.name}}">
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>

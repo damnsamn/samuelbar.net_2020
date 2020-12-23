@@ -1,4 +1,3 @@
-
 html,
 body {
     margin: 0;
@@ -8,36 +7,84 @@ body {
 
 body {
     font-family: "Source Code Pro", $font-family-monospace;
-    font-size: 18px;
     color: $color--white;
     background: $color--black;
     display: flex;
     flex-direction: column;
+    * {
+        box-sizing: border-box;
+    }
+
+    @include bp-tablet-up {
+        font-size: 18px;
+    }
 }
 
 main.content {
     flex: 1 0 auto;
     position: relative;
 
-    &::before, &::after {
+    &::before,
+    &::after {
         content: "";
         display: block;
         position: absolute;
         background-image: url("/assets/images/border-dash.svg");
         width: 2px;
         height: 100%;
+        top: 0;
     }
 
     &::before {
-        left: 0;
+        right: calc(100% - #{$grid-gutter-width});
+        @include bp-tablet-up {
+            right: 100%;
+        }
     }
 
     &::after {
-        right: 0;
+        left: calc(100% - #{$grid-gutter-width});
+        @include bp-tablet-up {
+            left: 100%;
+        }
+    }
+}
+
+p {
+    &:first-child {
+        margin-top: 0;
+    }
+    &:last-child {
+        margin-bottom: 0;
     }
 }
 
 ::selection {
     color: $color--black;
     background-color: #ffd600;
+}
+
+h1,
+.h1 {
+    @include h1;
+}
+h2,
+.h2 {
+    @include h2;
+}
+h3,
+.h3 {
+    @include h3;
+}
+h4,
+.h4 {
+    @include h4;
+}
+h5,
+.h5 {
+    @include h5;
+}
+h6,
+.h6 {
+    @include h6;
 }

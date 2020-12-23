@@ -1,3 +1,85 @@
+@mixin component-margin($direction, $mult: 1) {
+    margin-#{$direction}: $spacer--128 * $mult;
+    @include bp-mobile-down {
+        margin-#{$direction}: $spacer--96 * $mult;
+    }
+}
+
+// Apply a pseudo-element border, with a negative margin offset
+@mixin pseudo-border($style, $color, $radius: 0, $offset: 0) {
+    position: relative;
+    &::before {
+        content: "";
+        pointer-events: none;
+        position: absolute;
+        color: $color;
+        border: $style;
+        border-radius: $radius;
+        left: -$offset;
+        right: -$offset;
+        top: -$offset;
+        bottom: -$offset;
+        z-index: 1;
+    }
+}
+
+// Resize font responsively by a factor of 1rem.
+// This mixin will scale down the $size by certain factors per breakpoint.
+// Take difference between $size and $rem, divide that by value
+@mixin responsive-font-size($size) {
+    font-size: calc(#{$size} - ((#{$size} - 1rem) / 1.6)) !important;
+
+    @include bp-tablet-up {
+    font-size: calc(#{$size} - ((#{$size} - 1rem) / 2)) !important;
+    }
+
+    @include bp-laptop-up {
+        font-size: calc(#{$size} - ((#{$size} - 1rem) / 3)) !important;
+    }
+    @include bp-desktop-up {
+        font-size: $size !important;
+    }
+}
+
+
+// Headings
+// Type scale: Major Third
+@mixin heading {
+    font-weight: $font-weight--bold;
+    line-height: 1.5;
+    margin: 1em 0 0.5em;
+    &:first-child {
+        margin-top: 0;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+@mixin h1 {
+    @include heading;
+    @include responsive-font-size(3.052rem);
+}
+@mixin h2 {
+    @include heading;
+    @include responsive-font-size(2.441rem);
+}
+@mixin h3 {
+    @include heading;
+    @include responsive-font-size(1.953rem);
+}
+@mixin h4 {
+    @include heading;
+    @include responsive-font-size(1.563rem);
+}
+@mixin h5 {
+    @include heading;
+    @include responsive-font-size(1.25rem);
+}
+@mixin h6 {
+    @include heading;
+    @include responsive-font-size(1rem);
+}
+
 /***** RESPONSIVE HELPERS *****/
 
 // Shortened bootstrap mixins for our set device-breakpoints

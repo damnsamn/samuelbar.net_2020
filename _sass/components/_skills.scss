@@ -1,0 +1,26 @@
+.skills {
+    @include component-margin(top);
+    @include component-margin(bottom);
+
+    &__list {
+        @include list-unstyled;
+        display: flex;
+        flex-wrap: wrap;
+        margin: -$grid-gutter-width/2;
+        padding-top: $spacer--24;
+    }
+
+    &__item {
+        padding: $grid-gutter-width/2;
+        img {
+            width: auto;
+            height: 50px;
+            @include bp-mobile-up {
+                height: 65px;
+            }
+            @include bp-tablet-up {
+                height: 80px;
+            }
+        }
+    }
+}
