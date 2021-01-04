@@ -1,0 +1,10 @@
+{% capture modifiers %}{% assign list = include.modifiers | split: " " %}{% for mod in list%} button--{{mod}}{%endfor%}{% endcapture %}
+
+{% if include.type == "button" %}
+<button class="button {{modifiers}}">{{include.label}}</button>
+
+
+{% elsif include.type == "link" %}
+<a class="button {{modifiers}}" href="{{include.href}}">{{include.label}}</a>
+
+{% endif %}

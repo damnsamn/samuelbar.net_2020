@@ -1,0 +1,42 @@
+---
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+
+layout: default
+intro-img: assets/images/portrait.png
+intro-img-alt: Portrait photograph of Sam wearing a turtleneck, with his hand on his chin, peering ponderously camera.
+intro-img-size: 190
+intro-heading: Hi, I'm Sam
+intro-titles: [
+User Experience Designer,
+Front-end Web Developer
+]
+---
+
+
+<section class="intro row">
+    <div class="content-column intro__header">
+        <div class="intro__image"><img src="{{page.intro-img}}" alt="{{page.intro-img-alt}}" height="{{page.intro-img-size}}" width="{{page.intro-img-size}}"></div>
+        <div class="intro__content">
+            <h1 class="intro__heading">{{page.intro-heading}}</h1>
+            {% for title in page.intro-titles %}
+            <h2 class="intro__title">{{title}}</h2>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="content-column">
+        <p>I design and develop websites and other digital experiences. I’m currently based in Perth, Western Australia.</p>
+        <p>I love to build digital products from the ground up: starting from ideas and conversations; through carefully considered designs; to satisfying, user-friendly and accessibly solutions. I also really enjoy dipping my toes into whichever technology or skillset is necessary to reach an awesome solution.</p>
+    </div>
+    <div class="content-column">
+        {% include common/button.html type="link" href="#projects" label="See Projects" %}
+    </div>
+</section>
+
+{% include common/skills.html %}
+
+{% include common/cta.html heading="Want to see what I can do?" description="Have a look through some of my prior projects, or pick through some of my often-used code snippets I store on this site for my own (or anyone else’s) repeated use."
+buttons="See Projects, /projects; See Snippets, /snippets, stroke" %}
+
+{% include common/cta.html color="red" label="What I'm working on..." heading="UX Design & Front-end Development at Diversus" description="I sometimes take odd-jobs during my down time. If I seem like a good fit for your exciting new idea or project, let me know!"
+buttons="Get in touch, /contact" %}

@@ -1,0 +1,20 @@
+/*
+The below block of code will re-define Bootstrap 4's breakpoints and container max-widths.
+Bootstrap 4's breakpointed classes are compiled based on the below SCSS maps within Bootstrap's own
+stylesheets. By overriding them here with our own breakpoints and max-widths, we can automatically
+add our own breakpoints to Bootstrap's existing classes:
+eg .col-[your-breakpoint-name]-12
+*/
+
+// Bootsrap Overrides
+$grid-breakpoints: ( xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1366px );
+$container-max-widths: ( sm: 540px, md: 720px, lg: 960px, xl: 1140px, xxl: 1280px );
+
+:root {
+    @each $mw, $value in $container-max-widths {
+        --max-width-#{$mw}: #{$value};
+    }
+}
+
+@import "../assets/lib/bootstrap-5.0.0-beta1/scss/containers";
+@import "../assets/lib/bootstrap-5.0.0-beta1/scss/grid";

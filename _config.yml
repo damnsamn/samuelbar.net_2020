@@ -1,0 +1,30 @@
+title: "Sam Barnett | Perth UX Developer"
+email: your-email@example.com
+description: >- # this means to ignore newlines until "baseurl:"
+  A Front-end Developer and User Experience Designer based in Perth, WA. I love to bring designs through from pen-and-pad sketches to fully functioning web experiences that people love to use.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: damnsamn
+github_username:  damnsamn
+
+host: 0.0.0.0
+
+include: ['_pages']
+collections_dir: _collections
+collections:
+  snippets:
+    output: true
+    permalink: /:collection/:title
+  projects:
+    output: true
+    permalink: /:collection/:title
+
+
+# Sass settings
+sass:
+  add_charset: true
+  sass_dir: _sass
+  style: compressed
+
+plugins:
+  - jekyll-autoprefixer

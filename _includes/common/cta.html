@@ -1,0 +1,68 @@
+{% assign color = include.color %}
+{% assign ctaColor = "cta--" | append: include.color %}
+
+<div class="cta {{ctaColor}} row">
+    <div class="content-column">
+        {% if include.label %}
+            {% if include.heading %}
+                <h2 class="h3 cta__label">
+            {% else %}
+                <h3 class=" cta__label">
+            {% endif %}
+                {{include.label}}
+            {% if include.heading %}
+                </h2>
+            {% else %}
+                </h3>
+            {% endif %}
+        {% endif %}
+
+        {% if include.heading %}
+            {% if include.label %}
+                <h3 class="h1 cta__heading">{{include.heading}}</h3>
+            {% else %}
+                <h2 class="cta__heading">{{include.heading}}</h2>
+            {% endif %}
+        {% endif %}
+
+        {% if include.description %}
+            <div class="cta__description">
+                {{include.description}}
+            </div>
+        {% endif %}
+
+        <!-- cta button syntax is a bit fucky, can't initialise new object variables in Liquid.
+            Pass a string formatted as follows to include.buttons (each button comma separated)
+
+            label, href, modifiers; label, href, modifiers
+        -->
+
+        {% if include.buttons or include.button %}
+            <div class="cta__buttons">
+                {% if include.buttons %}
+                    {% assign buttons = include.buttons | split: "; " %}
+                    {% for button in buttons %}
+                        {% assign this = button | split: ", " %}
+
+                        {% if this[0] %}
+                            {% assign label = this[0] %}
+                        {% endif %}
+
+                        {% if this[1] %}
+                            {% assign href = this[1] %}
+                        {% endif %}
+
+                        {% if this[2] %}
+                            {% capture mods %}{{include.color}} {{this[2]}}{% endcapture %}
+                        {% else %}
+                            {% assign mods = include.color %}
+                        {% endif %}
+
+                        {% include common/button.html type="link" href=href label=label modifiers=mods %}
+                        {% assign mods = "" %}
+                    {% endfor %}
+                {% endif %}
+            </div>
+        {% endif %}
+    </div>
+</div>

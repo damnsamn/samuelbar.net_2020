@@ -1,0 +1,61 @@
+.button {
+    display: inline;
+    font-size: 18px;
+    padding: calc(1em - 10px) 1em;
+    font-weight: $font-weight--bold;
+    color: $color--black;
+    background: $color--white;
+    text-decoration: none;
+    line-height: 1.27;
+    &:not(.button--stroke) {
+        outline-color: $color--white !important;
+    }
+
+    &--stroke {
+        background: none;
+        color: $color--white;
+
+        position: relative;
+        @include pseudo-border(1px solid, inherit);
+    }
+
+    &--small {
+        font-size: 16px;
+    }
+
+    &--red {
+        &:not([class*="button--stroke"]) {
+            background-color: $color--light-red;
+        }
+        &[class*="button--stroke"] {
+            color: $color--light-red;
+        }
+        &:not(.button--stroke) {
+            outline-color: $color--light-red !important;
+        }
+    }
+
+    &--blue {
+        &:not([class*="button--stroke"]) {
+            background-color: $color--light-blue;
+        }
+        &[class*="button--stroke"] {
+            color: $color--light-blue;
+        }
+        &:not(.button--stroke) {
+            outline-color: $color--light-blue !important;
+        }
+    }
+
+    &--green {
+        &:not([class*="button--stroke"]) {
+            background-color: $color--light-green;
+        }
+        &[class*="button--stroke"] {
+            color: $color--light-green;
+        }
+        &:not(.button--stroke) {
+            outline-color: $color--light-green !important;
+        }
+    }
+}
