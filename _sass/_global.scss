@@ -24,6 +24,7 @@ body {
 main.content {
     flex: 1 0 auto;
     position: relative;
+    overflow-x: hidden;
 
     &::before,
     &::after {

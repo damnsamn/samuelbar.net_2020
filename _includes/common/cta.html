@@ -41,7 +41,6 @@
             <div class="cta__buttons">
                 {% if include.buttons %}
                     {% assign buttons = include.buttons | split: "; " %}
-                    {{buttons}}
                     {% for button in buttons %}
                         {% assign this = button | split: ", " %}
 
@@ -55,6 +54,8 @@
 
                         {% if this[2] %}
                             {% capture mods %}{{include.color}} {{this[2]}}{% endcapture %}
+                        {% else %}
+                            {% assign mods = include.color %}
                         {% endif %}
 
                         {% include common/button.html type="link" href=href label=label modifiers=mods %}
@@ -63,8 +64,5 @@
                 {% endif %}
             </div>
         {% endif %}
-
-
-
     </div>
 </div>
