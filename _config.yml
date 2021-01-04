@@ -2,8 +2,8 @@ title: "Sam Barnett | Perth UX Developer"
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   A Front-end Developer and User Experience Designer based in Perth, WA. I love to bring designs through from pen-and-pad sketches to fully functioning web experiences that people love to use.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/samuelbar.net_2020" # the subpath of your site, e.g. /blog
+url: "https://damnsamn.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: damnsamn
 github_username:  damnsamn
 

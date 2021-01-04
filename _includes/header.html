@@ -10,7 +10,7 @@
         <div class="header__navigation">
             {% assign sorted_pages = site.html_pages | sort:"order" | where: "page", "true" %}
             {% for node in sorted_pages %}
-            <a href="{{node.url}}">{{node.title}}</a>
+            <a href="{{node.url | relative_url}}">{{node.title}}</a>
             {% endfor %}
         </div>
 

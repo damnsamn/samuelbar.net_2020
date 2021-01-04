@@ -9,7 +9,7 @@
             <li class="skills__item">
                 <span class="sr-only">{{skill.name}}</span>
                 <a href="{{skill.href}}">
-                    <img src="{{skill.src}}" alt="Visit the {{skill.name}} website" title="{{skill.name}}">
+                    <img src="{{ skill.src | relative_url }}" alt="Visit the {{skill.name}} website" title="{{skill.name}}">
                 </a>
             </li>
             {% endfor %}

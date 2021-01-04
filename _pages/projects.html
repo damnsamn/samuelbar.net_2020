@@ -7,5 +7,5 @@ permalink: /projects
 ---
 
 {% for project in site.projects %}
-    <a href="{{project.url}}">{{project.title}}</a>
+    <a href="{{project.url | relative_url}}">{{project.title}}</a>
 {% endfor %}
