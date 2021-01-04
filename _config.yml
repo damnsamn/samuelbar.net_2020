@@ -7,6 +7,8 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: damnsamn
 github_username:  damnsamn
 
+host: 0.0.0.0
+
 include: ['_pages']
 collections_dir: _collections
 collections:

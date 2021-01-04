@@ -6,21 +6,39 @@
         margin-left: -$spacer--32;
         margin-right: -$spacer--32;
         justify-content: center;
+
+        @include bp-mobile-down {
+            margin-left: -$spacer--24;
+            margin-right: -$spacer--24;
+        }
     }
 
     .content-column {
         border: 1px solid $color--white;
         background-color: $color--dark-white;
-        padding: $spacer--32;
-        margin: 0 (-$spacer--32);
+        padding: $spacer--24;
+        margin: 0 (-$spacer--24);
+
+        @include bp-mobile-down {
+            padding: $spacer--24;
+            margin: 0 (-$spacer--24);
+        }
     }
 
     &__label {
         margin: 0 0 $spacer--12 0;
+
+        @include bp-mobile-down {
+            margin: 0 0 $spacer--8 0;
+        }
     }
 
     &__heading {
         margin: 0 0 $spacer--32 0;
+
+        @include bp-mobile-down {
+            margin: 0 0 $spacer--24 0;
+        }
     }
 
     &__buttons {
