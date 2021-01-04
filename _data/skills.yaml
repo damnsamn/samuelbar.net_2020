@@ -1,0 +1,24 @@
+- name: Figma
+  src: /assets/images/icons/icon-figma.svg
+  href: https://www.figma.com/
+- name: Adobe Creative Cloud
+  src: /assets/images/icons/icon-adobe.svg
+  href: https://www.adobe.com/au/creativecloud.html/
+- name: HTML5
+  src: /assets/images/icons/icon-html.svg
+  href: https://developer.mozilla.org/en-US/docs/Web/html/
+- name: CSS3
+  src: /assets/images/icons/icon-css.svg
+  href: https://developer.mozilla.org/en-US/docs/Web/css/
+- name: Sass
+  src: /assets/images/icons/icon-sass.svg
+  href: https://sass-lang.com/
+- name: Javascript
+  src: /assets/images/icons/icon-js.svg
+  href: https://developer.mozilla.org/en-US/docs/Web/javascript/
+- name: Angular
+  src: /assets/images/icons/icon-angular.svg
+  href: https://www.angular.io/
+- name: Git
+  src: /assets/images/icons/icon-git.svg
+  href: https://git-scm.com/

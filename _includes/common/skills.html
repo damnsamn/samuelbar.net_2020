@@ -5,7 +5,7 @@
         <p>Below is a non-exhaustive list of some of the skills and technologies I’ve picked up over the years, between graphic design, UX, and web development.</p>
 
         <ul class="skills__list">
-            {% for skill in site.skills %}
+            {% for skill in site.data.skills %}
             <li class="skills__item">
                 <span class="sr-only">{{skill.name}}</span>
                 <a href="{{skill.href}}">

@@ -1,0 +1,11 @@
+---
+layout: default
+page: true
+order: 1
+title: Snippets
+permalink: /snippets
+---
+
+{% for snippet in site.snippets %}
+    <a href="{{snippet.url}}">{{snippet.title}}</a>
+{% endfor %}
