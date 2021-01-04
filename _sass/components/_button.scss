@@ -7,6 +7,9 @@
     background: $color--white;
     text-decoration: none;
     line-height: 1.27;
+    &:not(.button--stroke) {
+        outline-color: $color--white !important;
+    }
 
     &--stroke {
         background: none;
@@ -24,8 +27,11 @@
         &:not([class*="button--stroke"]) {
             background-color: $color--light-red;
         }
-        &[class*="button--stroke"]{
+        &[class*="button--stroke"] {
             color: $color--light-red;
+        }
+        &:not(.button--stroke) {
+            outline-color: $color--light-red !important;
         }
     }
 
@@ -33,8 +39,11 @@
         &:not([class*="button--stroke"]) {
             background-color: $color--light-blue;
         }
-        &[class*="button--stroke"]{
+        &[class*="button--stroke"] {
             color: $color--light-blue;
+        }
+        &:not(.button--stroke) {
+            outline-color: $color--light-blue !important;
         }
     }
 
@@ -42,8 +51,11 @@
         &:not([class*="button--stroke"]) {
             background-color: $color--light-green;
         }
-        &[class*="button--stroke"]{
+        &[class*="button--stroke"] {
             color: $color--light-green;
+        }
+        &:not(.button--stroke) {
+            outline-color: $color--light-green !important;
         }
     }
 }

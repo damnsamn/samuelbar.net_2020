@@ -12,6 +12,9 @@
 
     &__item {
         padding: $grid-gutter-width/2;
+        a {
+            color: $color--white;
+        }
         img {
             width: auto;
             height: 50px;

@@ -1,0 +1,22 @@
+.cta {
+    border: 1px solid $color--white;
+    background-color: $color--dark-white;
+
+    &--red {
+        color: $color--light-red;
+        border-color: $color--light-red;
+        background-color: $color--dark-red;
+    }
+
+    &--green {
+        color: $color--light-green;
+        border-color: $color--light-green;
+        background-color: $color--dark-green;
+    }
+
+    &--blue {
+        color: $color--light-blue;
+        border-color: $color--light-blue;
+        background-color: $color--dark-blue;
+    }
+}

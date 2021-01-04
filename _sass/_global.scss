@@ -11,6 +11,7 @@ body {
     background: $color--black;
     display: flex;
     flex-direction: column;
+    line-height: 1.4;
     * {
         box-sizing: border-box;
     }
@@ -87,4 +88,11 @@ h5,
 h6,
 .h6 {
     @include h6;
+}
+
+body.user-is-tabbing {
+    :focus {
+        outline: 2px dashed;
+        outline-offset: 2px;
+    }
 }
