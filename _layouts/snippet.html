@@ -11,7 +11,20 @@
                 <div class="content-column">
                     <h1>{{page.title}}</h1>
 
-                    {{ content }}
+                    <div class="snippet__details">
+                        <div class="snippet__tags">
+                            {% for tag in page.tags %}
+                            <div class="tag tag__{{tag}}">{{tag}}</div>
+                            {% endfor %}
+                        </div>
+
+                        <div class="snippet__date">Last updated: <span>DD MMM YYYY</span></div>
+                    </div>
+                    <div class="snippet__body">
+
+                        {{ content }}
+
+                    </div>
                 </div>
             </div>
 

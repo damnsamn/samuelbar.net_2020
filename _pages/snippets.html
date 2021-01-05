@@ -8,4 +8,5 @@ permalink: /snippets
 
 {% for snippet in site.snippets %}
     <a href="{{snippet.url}}">{{snippet.title}}</a>
+    {{snippet.gist}}
 {% endfor %}

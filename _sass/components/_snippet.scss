@@ -1,0 +1,56 @@
+.snippet {
+    @include page-margin(top);
+    @include page-margin(bottom);
+
+    .gist {
+        margin: 1em 0;
+    }
+
+    &__details {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -$spacer--8 0;
+        > * {
+            margin: $spacer--8 0;
+        }
+        @include bp-mobile-down {
+            flex-direction: column;
+        }
+    }
+
+    &__tags {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        .tag + .tag {
+            margin-left: $spacer--16;
+        }
+        @include bp-tablet-up {
+            margin-right: $spacer--24;
+        }
+    }
+
+    &__date {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        opacity: 0;
+        transition: 0.5s ease;
+
+        &.set {
+            opacity: 1;
+        }
+
+        @include bp-mobile-up {
+        margin-left: auto;
+        }
+
+        span {
+            margin-left: 1em;
+        }
+    }
+
+    &__body {
+        @include page-margin(top);
+    }
+}

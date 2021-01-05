@@ -1,0 +1,18 @@
+.tag {
+    font-size: 12px;
+    padding: 0.5em 0.75em;
+    display: inline-block;
+
+    &__HTML {
+        color: $color__light-red;
+        background-color: $color__dark-red;
+    }
+    &__CSS {
+        color: $color__light-blue;
+        background-color: $color__dark-blue;
+    }
+    &__JavaScript {
+        color: $color__white;
+        background-color: $color__dark-white;
+    }
+}
