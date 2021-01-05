@@ -13,9 +13,9 @@
     @include bp-tablet-down {
         margin-#{$direction}: $spacer--48 * $mult;
     }
-    @include bp-mobile-down {
-        margin-#{$direction}: $spacer--32 * $mult;
-    }
+    // @include bp-mobile-down {
+    //     margin-#{$direction}: $spacer--32 * $mult;
+    // }
 }
 
 // Apply a pseudo-element border, with a negative margin offset
