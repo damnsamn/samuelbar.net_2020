@@ -1,8 +1,21 @@
 @mixin component-margin($direction, $mult: 1) {
     margin-#{$direction}: $spacer--128 * $mult;
-    @include bp-mobile-down {
+    @include bp-tablet-down {
         margin-#{$direction}: $spacer--96 * $mult;
     }
+    @include bp-mobile-down {
+        margin-#{$direction}: $spacer--64 * $mult;
+    }
+}
+
+@mixin page-margin($direction, $mult: 1) {
+    margin-#{$direction}: $spacer--64 * $mult;
+    @include bp-tablet-down {
+        margin-#{$direction}: $spacer--48 * $mult;
+    }
+    // @include bp-mobile-down {
+    //     margin-#{$direction}: $spacer--32 * $mult;
+    // }
 }
 
 // Apply a pseudo-element border, with a negative margin offset

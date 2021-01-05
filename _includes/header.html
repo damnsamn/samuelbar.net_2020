@@ -15,40 +15,4 @@
         </div>
 
     </div>
-
-
-
-    <!-- <nav class="container">
-        <a href="{{site.url | relative_url}}" title="Return to Homepage" class="logo-link">
-            <img class="logo" alt="Logo Image" src="{{'/assets/images/logo.svg' | relative_url}}" height="80" data-no-retina>
-            <img class="logo logo-dark" alt="Logo Image" src="{{'/assets/images/logo-dark.svg' | relative_url}}" height="80" data-no-retina>
-        </a>
-        <h1>SAMUEL<br><span class="text-blue">BARNETT</span></h1>
-
-        <div class="nav-button">
-            <div class="nav-button-bar"></div>
-            <div class="nav-button-bar"></div>
-            <div class="nav-button-bar"></div>
-        </div>
-
-        <ul>
-            <li class=" ">
-                <a href="{{ site.url | relative_url }}" class="{% if page.url == '/' %}active{% endif %}">Home</a>
-            </li>
-
-            {% assign sorted_pages = site.pages | sort:"order" | where: "publish", "true"  %}
-            {% for node in sorted_pages %}
-            {% if node.title %}
-            <li class=" ">
-                <a href="{{ node.url | relative_url }}" class="{% if page.url == node.url or page.url contains node.url %}active{% endif %}">{{node.title}}</a>
-            </li>
-            {% endif %}
-            {% endfor %}
-
-            <li class="d-md-none">
-                <label class="dark-mode-label sr-only" for="dark-mode-toggle">Toggle Dark Mode</label>
-                <button id="dark-mode-toggle" class="dark-mode-button" role="switch" aria-checked="false"><i class="fas fa-sun dark-mode-icon"></i><i class="fas fa-moon dark-mode-icon"></i></button>
-            </li>
-        </ul>
-    </nav> -->
 </header>

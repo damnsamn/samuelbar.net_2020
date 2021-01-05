@@ -8,7 +8,7 @@ body {
 
 body {
     font-family: "Source Code Pro", $font-family-monospace;
-    color: $color--white;
+    color: $color__text;
     background: $color--black;
     display: flex;
     flex-direction: column;
@@ -18,7 +18,7 @@ body {
     }
 
     @include bp-tablet-up {
-        font-size: 18px;
+        font-size: 16px;
     }
 }
 
@@ -96,4 +96,16 @@ body.user-is-tabbing {
         outline: 2px dashed;
         outline-offset: 2px;
     }
+}
+
+ul {
+    > * + * {
+        margin-top: 0.33em;
+    }
+}
+
+code {
+    padding: 0 0.25em;
+    background-color: $color--dark-white;
+    color: $color__text--dark;
 }

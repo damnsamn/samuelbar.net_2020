@@ -1,13 +1,16 @@
-$color--black: #0F0C0B;
-$color--white: #F4EFE9;
+$color--black: #0f0c0b;
+$color--white: #f4efe9;
 $color--dark-white: #272523;
-
-$color--light-red: #FFCACA;
+$color--medium-white: #bcb6af;
+$color--light-red: #ffcaca;
 $color--dark-red: #221414;
-$color--light-green: #CEFFCA;
-$color--dark-green: #151A14;
-$color--light-blue: #AFE7FF;
-$color--dark-blue: #14191B;
+$color--light-green: #ceffca;
+$color--dark-green: #151a14;
+$color--light-blue: #afe7ff;
+$color--dark-blue: #14191b;
+
+$color__text: $color--white;
+$color__text--dark: $color--medium-white;
 
 $height__header--desktop: 120px;
 $height__header--mobile: 80px;
