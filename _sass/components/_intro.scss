@@ -2,7 +2,7 @@
     @include component-margin(top);
     @include component-margin(bottom);
 
-    .content-column + .content-column {
+    .col-12 + .col-12 {
         margin-top: $spacer--48;
     }
 

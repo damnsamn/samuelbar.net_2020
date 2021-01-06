@@ -26,3 +26,33 @@ var userIsTabbing;
 
     window.addEventListener('keydown', handleFirstTab);
 })();
+
+(function passClicks() {
+
+    $("[data-click]").each(function () {
+
+        var $this = $(this),
+
+            $target = $($this).find($this.data("click"));
+
+
+
+
+        $this.click(function () {
+
+            if ($target.attr("href"))
+
+                window.location.href = $target.attr("href")
+
+            else
+
+                return false;
+
+        })
+
+
+
+
+    });
+
+})();

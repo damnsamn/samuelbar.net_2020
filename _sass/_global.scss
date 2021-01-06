@@ -109,3 +109,8 @@ code {
     background-color: $color--dark-white;
     color: $color__text--dark;
 }
+
+em {
+    font-style: normal;
+    font-weight: $font-weight--bold;
+}

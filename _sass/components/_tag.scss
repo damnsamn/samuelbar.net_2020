@@ -2,17 +2,26 @@
     font-size: 12px;
     padding: 0.5em 0.75em;
     display: inline-block;
+    border: 1px solid;
 
-    &__HTML {
+    &__html {
         color: $color__light-red;
+        border-color: rgba($color__light-red, 0.5);
         background-color: $color__dark-red;
     }
-    &__CSS {
+    &__css {
         color: $color__light-blue;
+        border-color: rgba($color__light-blue, 0.5);
         background-color: $color__dark-blue;
     }
-    &__JavaScript {
+    &__javascript {
         color: $color__white;
+        border-color: rgba($color__white, 0.5);
         background-color: $color__dark-white;
+    }
+    &__a11y {
+        color: $color__light-green;
+        border-color: rgba($color__light-green, 0.5);
+        background-color: $color__dark-green;
     }
 }

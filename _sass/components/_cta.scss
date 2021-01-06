@@ -1,27 +1,31 @@
 .cta {
     @include component-margin(top);
     @include component-margin(bottom);
+    margin-left: -$spacer--32;
+    margin-right: -$spacer--32;
+    justify-content: center;
 
-    &.row {
-        margin-left: -$spacer--32;
-        margin-right: -$spacer--32;
-        justify-content: center;
-
-        @include bp-mobile-down {
-            margin-left: -$spacer--24;
-            margin-right: -$spacer--24;
-        }
+    @include bp-tablet-down {
+        margin-left: -$spacer--24;
+        margin-right: -$spacer--24;
     }
 
-    .content-column {
+    @include bp-mobile-down {
+        margin-left: -$spacer--16;
+        margin-right: -$spacer--16;
+    }
+
+    &__inner {
         border: 1px solid $color--white;
         background-color: $color--dark-white;
-        padding: $spacer--24;
-        margin: 0 (-$spacer--24);
+        padding: $spacer--32;
+
+        @include bp-tablet-down {
+            padding: $spacer--24;
+        }
 
         @include bp-mobile-down {
-            padding: $spacer--24;
-            margin: 0 (-$spacer--24);
+            padding: $spacer--16;
         }
     }
 
@@ -54,7 +58,7 @@
     }
 
     &--red {
-        .content-column {
+        .cta__inner {
             color: $color--light-red;
             border-color: $color--light-red;
             background-color: $color--dark-red;
@@ -62,7 +66,7 @@
     }
 
     &--green {
-        .content-column {
+        .cta__inner {
             color: $color--light-green;
             border-color: $color--light-green;
             background-color: $color--dark-green;
@@ -70,7 +74,7 @@
     }
 
     &--blue {
-        .content-column {
+        .cta__inner {
             color: $color--light-blue;
             border-color: $color--light-blue;
             background-color: $color--dark-blue;
