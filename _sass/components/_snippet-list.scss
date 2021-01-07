@@ -27,6 +27,10 @@
         text-decoration: none;
     }
 
+    &__description {
+        margin: $spacer--16 0;
+    }
+
     &__tags {
         display: flex;
         justify-content: flex-end;

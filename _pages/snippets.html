@@ -14,6 +14,7 @@ permalink: /snippets
     {% for snippet in site.snippets %}
     <li class="snippet-list__item" data-click=".snippet-list__link">
         <a class="snippet-list__link" href="{{ snippet.url | relative_url }}">{{snippet.title}}</a>
+        <div class="snippet-list__description">{{snippet.description}}</div>
         <div class="snippet-list__tags">
             {% for tag in snippet.tags %}
             {% include common/tag.html type=tag %}
