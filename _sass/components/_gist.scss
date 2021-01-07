@@ -5,10 +5,10 @@
   */
 body .gist {
     .gist-file {
-        border: 1px solid $color--dark-white
+        border: 1px solid $color--dark-white;
     }
     .gist-data {
-        background: none;
+        background: $color--darker-white;
         border: 0;
     }
     .gist-meta {
@@ -23,12 +23,14 @@ body .gist {
 
     .highlight {
         display: block;
-        background: hsl(0, 0%, 8%);
+        background: none;
         color: #495162;
     }
 
     td {
-        white-space: pre-wrap !important;
+        @include bp-tablet-up {
+            white-space: pre-wrap !important;
+        }
     }
 
     .blob-code-inner {

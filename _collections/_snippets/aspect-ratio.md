@@ -3,6 +3,7 @@ layout: snippet
 gist: c68dd6016b0738be14b985735c51b9ae
 tags:
     - CSS
+description: Force an element to maintain a given aspect ratio
 ---
 
 At the time of writing, CSS has no natively-handled way of maintaining a specific aspect ratio for a given element. This can be useful for:

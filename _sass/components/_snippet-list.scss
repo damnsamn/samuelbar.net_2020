@@ -1,0 +1,43 @@
+.snippet-list {
+    padding: 0;
+    @include page-margin(top);
+
+    &__item {
+        padding: $spacer--32;
+        background: $color--darker-white;
+        list-style: none;
+        cursor: pointer;
+
+        & + & {
+            margin-top: $spacer--32;
+        }
+
+        @include bp-mobile-down {
+            padding: $spacer--24;
+            & + & {
+                margin-top: $spacer--24;
+            }
+        }
+    }
+
+    &__link {
+        color: $color--white;
+        @include h4;
+        // display: block;
+        text-decoration: none;
+    }
+
+    &__description {
+        margin: $spacer--16 0;
+    }
+
+    &__tags {
+        display: flex;
+        justify-content: flex-end;
+        margin: -$spacer--8;
+
+        .tag {
+            margin: $spacer--8;
+        }
+    }
+}

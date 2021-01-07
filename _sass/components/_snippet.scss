@@ -1,20 +1,16 @@
 .snippet {
-    @include page-margin(top);
-    @include page-margin(bottom);
-
     .gist {
-        margin: 1em 0;
+        margin: 1.5em 0;
     }
 
     &__details {
         display: flex;
         flex-wrap: wrap;
+        flex-direction: column;
         margin: -$spacer--8 0;
+
         > * {
             margin: $spacer--8 0;
-        }
-        @include bp-mobile-down {
-            flex-direction: column;
         }
     }
 
@@ -31,20 +27,16 @@
     }
 
     &__date {
-        display: flex;
-        align-items: center;
         font-size: 14px;
         opacity: 0;
         transition: 0.5s ease;
-
         &.set {
             opacity: 1;
         }
-
-        @include bp-mobile-up {
-        margin-left: auto;
+        &.saved {
+            transition: none;
+            opacity: 1;
         }
-
         span {
             margin-left: 1em;
         }

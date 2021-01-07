@@ -1,11 +1,25 @@
 ---
 layout: default
 page: true
-order: 1
+order: 2
 title: Snippets
 permalink: /snippets
 ---
 
-{% for snippet in site.snippets %}
-    <a href="{{snippet.url | relative_url}}">{{snippet.title}}</a>
-{% endfor %}
+<h1>Snippets</h1>
+
+<p>A central repository for my most-often-used snippets of code. I maintain this mostly for my own use throughout different projects, but I've also annotated each snippet to explain its purpose and why I use it.</p>
+
+<ul class="snippet-list">
+    {% for snippet in site.snippets %}
+    <li class="snippet-list__item" data-click=".snippet-list__link">
+        <a class="snippet-list__link" href="{{ snippet.url | relative_url }}">{{snippet.title}}</a>
+        <div class="snippet-list__description">{{snippet.description}}</div>
+        <div class="snippet-list__tags">
+            {% for tag in snippet.tags %}
+            {% include common/tag.html type=tag %}
+            {% endfor %}
+        </div>
+    </li>
+    {% endfor %}
+</ul>
