@@ -1,0 +1,41 @@
+.project-list {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: -$spacer--16;
+    @include section-margin(top,0.5);
+
+    [class*="col"] {
+        list-style: none;
+        padding: $spacer--16;
+    }
+
+    &__item {
+        background: $color--dark-white;
+        cursor: pointer;
+    }
+
+    &__image {
+        @include aspect-ratio(16, 9);
+    }
+
+    &__body {
+        padding: $spacer--24;
+        & + & {
+            margin-top: $spacer--24;
+        }
+
+        @include bp-tablet-up {
+            padding: $spacer--32;
+            & + & {
+                margin-top: $spacer--32;
+            }
+        }
+    }
+
+    &__link {
+        @include unstyle-link;
+        @include h4;
+        line-height: 1.33;
+    }
+}

@@ -1,6 +1,6 @@
 .snippet-list {
     padding: 0;
-    @include page-margin(top);
+    @include section-margin(top, 0.5);
 
     &__item {
         padding: $spacer--32;
@@ -12,7 +12,7 @@
             margin-top: $spacer--32;
         }
 
-        @include bp-mobile-down {
+        @include bp-tablet-down {
             padding: $spacer--24;
             & + & {
                 margin-top: $spacer--24;
@@ -21,10 +21,8 @@
     }
 
     &__link {
-        color: $color--white;
+        @include unstyle-link;
         @include h4;
-        // display: block;
-        text-decoration: none;
     }
 
     &__description {

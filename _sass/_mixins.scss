@@ -8,13 +8,13 @@
     }
 }
 
-@mixin page-margin($direction, $mult: 1) {
+@mixin section-margin($direction, $mult: 1) {
     margin-#{$direction}: $spacer--64 * $mult;
     @include bp-tablet-down {
         margin-#{$direction}: $spacer--48 * $mult;
     }
 }
-@mixin page-padding($direction, $mult: 1) {
+@mixin section-padding($direction, $mult: 1) {
     padding-#{$direction}: $spacer--64 * $mult;
     @include bp-tablet-down {
         padding-#{$direction}: $spacer--48 * $mult;
@@ -41,6 +41,37 @@
         top: -$offset;
         bottom: -$offset;
         z-index: 1;
+    }
+}
+
+// Child will be scaled & cropped to cover area
+@mixin child-cover() {
+    position: relative;
+
+    >img,
+    >video,
+    >iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+@mixin aspect-ratio($x, $y, $height: null) {
+    // Variable-height by default.
+    // If a set height with variable width is required, set the $height variable.
+    @include child-cover();
+
+    @if not $height {
+        padding-bottom: 100% / $x * $y;
+    } @else {
+        height: $height;
+        width: calc(#{$height} / #{$x} * #{$y});
     }
 }
 

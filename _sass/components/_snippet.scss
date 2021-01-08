@@ -43,6 +43,6 @@
     }
 
     &__body {
-        @include page-margin(top);
+        @include section-margin(top);
     }
 }

@@ -6,20 +6,19 @@ title: Projects
 permalink: /projects
 ---
 
-<h1>Projects</h1>
+<section class="section">
+    <h1>Projects</h1>
 
-<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod itaque nulla consequuntur non, vel accusamus ipsam laborum excepturi eveniet libero illum, aliquid aut molestias unde aspernatur, enim repellat maiores quisquam.</p>
+    <p>Across my full-time work, jobs I've taken on in my spare time, and small projects during university, I take immense pride in the variety and quality of the work I produce. Below is a selection of the projects I'm most proud of.</p>
 
-<ul class="project-list">
-    {% for project in site.projects %}
-    <li class="project-list__item" data-click=".project-list__link">
-        <a class="project-list__link" href="{{ project.url | relative_url }}">{{project.title}}</a>
-        <div class="project-list__description">{{project.description}}</div>
-        <div class="project-list__tags">
-            {% for tag in project.tags %}
-            {% include common/tag.html type=tag %}
-            {% endfor %}
-        </div>
-    </li>
-    {% endfor %}
-</ul>
+    {% include common/project-list.html data=site.projects %}
+</section>
+
+<section class="section">
+    <h2 class="h1">Personal</h2>
+
+    <p>Outside of work, I also love challenging myself and learning through small creative projects for fun. You can see a collection of these personal projects below.</p>
+
+    {% assign personal = site.data.personal | sort: "order" %}
+    {% include common/project-list.html data=personal %}
+</section>

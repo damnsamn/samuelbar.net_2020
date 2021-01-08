@@ -16,7 +16,7 @@
         color: $color--white;
 
         position: relative;
-        @include pseudo-border(1px solid, inherit);
+        @include pseudo-border(2px solid, inherit);
     }
 
     &--small {

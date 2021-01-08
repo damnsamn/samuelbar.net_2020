@@ -19,15 +19,23 @@
         display: flex;
         align-items: center;
         flex-wrap: wrap;
+
+        @include bp-mobile-down {
+            flex-direction: column;
+        }
     }
 
     &__navigation {
         display: flex;
+        align-items: center;
         @include bp-mobile-down {
-            color: red;
-        }
-        @include bp-tablet-up {
-            color: blue;
+            flex-direction: column;
+            text-align: center;
+
+            .nav-item+.nav-item {
+                margin-left: 0;
+                margin-top: 1em;
+            }
         }
         .nav-item {
             font-size: inherit;
@@ -37,8 +45,13 @@
     &__details {
         text-align: right;
         justify-content: flex-end;
-        margin: $spacer--16 0 0 0;
-        @include bp-tablet-up {
+        margin: $spacer--32 0 0 0;
+
+        @include bp-mobile-down {
+            text-align: center;
+            align-self: center;
+        }
+        @include bp-mobile-up {
             margin: 0 0 0 auto;
         }
     }
