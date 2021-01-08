@@ -6,6 +6,20 @@ title: Projects
 permalink: /projects
 ---
 
-{% for project in site.projects %}
-    <a href="{{project.url}}">{{project.title}}</a>
-{% endfor %}
+<h1>Projects</h1>
+
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod itaque nulla consequuntur non, vel accusamus ipsam laborum excepturi eveniet libero illum, aliquid aut molestias unde aspernatur, enim repellat maiores quisquam.</p>
+
+<ul class="project-list">
+    {% for project in site.projects %}
+    <li class="project-list__item" data-click=".project-list__link">
+        <a class="project-list__link" href="{{ project.url | relative_url }}">{{project.title}}</a>
+        <div class="project-list__description">{{project.description}}</div>
+        <div class="project-list__tags">
+            {% for tag in project.tags %}
+            {% include common/tag.html type=tag %}
+            {% endfor %}
+        </div>
+    </li>
+    {% endfor %}
+</ul>

@@ -21,6 +21,11 @@
     }
 }
 
+@mixin unstyle-link {
+    color: inherit;
+    border: none;
+}
+
 // Apply a pseudo-element border, with a negative margin offset
 @mixin pseudo-border($style, $color, $radius: 0, $offset: 0) {
     position: relative;

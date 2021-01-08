@@ -47,9 +47,16 @@
         }
 
         a {
+            @include unstyle-link;
             z-index: 1;
             display: inline-block;
             margin-right: $spacer--32;
+            color: $color--black;
         }
+    }
+
+    &__navigation {
+        margin-left: $spacer--48;
+        align-self: center;
     }
 }

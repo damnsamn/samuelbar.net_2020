@@ -1,0 +1,45 @@
+.footer {
+    position: relative;
+    padding: $spacer--32 0;
+    font-size: 16px;
+
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        background: $color--white;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 2px;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__navigation {
+        display: flex;
+        @include bp-mobile-down {
+            color: red;
+        }
+        @include bp-tablet-up {
+            color: blue;
+        }
+        .nav-item {
+            font-size: inherit;
+        }
+    }
+
+    &__details {
+        text-align: right;
+        justify-content: flex-end;
+        margin: $spacer--16 0 0 0;
+        @include bp-tablet-up {
+            margin: 0 0 0 auto;
+        }
+    }
+}

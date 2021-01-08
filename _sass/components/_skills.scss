@@ -13,6 +13,7 @@
     &__item {
         padding: $grid-gutter-width/2;
         a {
+            @include unstyle-link;
             color: $color--white;
         }
         img {
