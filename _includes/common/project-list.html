@@ -8,7 +8,10 @@
             </div>
             {% endif %}
             <div class="project-list__body">
-                <a class="project-list__link" href="{{ project.url | relative_url }}">{{project.title}}</a>
+                <div class="project-list__header">
+                    <a class="project-list__link" href="{{ project.url | relative_url }}">{{project.title}}</a>
+                    {%if include.external%}<i class="fas fa-external-link-alt"></i>{%endif%}
+                </div>
                 <div class="project-list__description">{{project.description}}</div>
             </div>
 

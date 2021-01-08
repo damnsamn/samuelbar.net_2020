@@ -9,7 +9,7 @@ permalink: /projects
 <section class="section">
     <h1>Projects</h1>
 
-    <p>Across my full-time work, jobs I've taken on in my spare time, and small projects during university, I take immense pride in the variety and quality of the work I produce. Below is a selection of the projects I'm most proud of.</p>
+    <p>I take immense pride in the variety and quality of the work I produce and the projects I've contributed to. Below is a selection of the projects I'm most proud of.</p>
 
     {% include common/project-list.html data=site.projects %}
 </section>
@@ -20,5 +20,5 @@ permalink: /projects
     <p>Outside of work, I also love challenging myself and learning through small creative projects for fun. You can see a collection of these personal projects below.</p>
 
     {% assign personal = site.data.personal | sort: "order" %}
-    {% include common/project-list.html data=personal %}
+    {% include common/project-list.html data=personal external="true"%}
 </section>
