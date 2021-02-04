@@ -1,5 +1,5 @@
 ---
-layout: project
+layout: content
 order: 0
 title: Tourism WA Touch Interface
 client: Tourism WA

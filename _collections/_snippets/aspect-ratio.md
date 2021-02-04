@@ -1,5 +1,5 @@
 ---
-layout: snippet
+layout: content
 gist: c68dd6016b0738be14b985735c51b9ae
 tags:
     - CSS
