@@ -1,7 +1,4 @@
-.snippet {
-    .gist {
-        margin: 1.5em 0;
-    }
+.content {
 
     &__details {
         display: flex;
@@ -24,6 +21,11 @@
         @include bp-tablet-up {
             margin-right: $spacer--24;
         }
+    }
+
+    &__client {
+        font-weight: $font-weight--bold;
+        color: $color__text--dark;
     }
 
     &__date {

@@ -7,15 +7,16 @@
         {% include header.html %}
 
         <main class="content container" aria-label="Content">
-            <div class="project row">
+            <div class="row">
                 <div class="content-column">
                     <h1>{{page.title}}</h1>
 
-                    <div class="project__details">
-                        <div class="snippet__tags">
+                    <div class="content__details">
+                        <div class="content__client">{{page.client}}</div>
+                        <div class="content__tags">
                         </div>
                     </div>
-                    <div class="project__body">
+                    <div class="content__body">
 
                         {{ content }}
 

@@ -1,7 +1,7 @@
 <ul class="project-list row">
     {% for project in include.data %}
     <li class="col-12 col-lg-6">
-        <div class="project-list__item" data-click=".project-list__link">
+        <div class="project-list__item" data-click=".project-list__link" {% if project.platform %} title="Opens in {{project.platform}}" {% endif %}>
             {% if project.thumb %}
             <div class="project-list__image">
                 <img src="{{project.thumb | relative_url}}" alt="" height="200">

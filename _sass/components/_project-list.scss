@@ -1,11 +1,10 @@
 .project-list {
-    display: flex;
-    flex-direction: column;
     padding: 0;
     margin: 0 (-$spacer--16) (-$spacer--32) (-$spacer--16);
     @include section-margin(top,0.5);
 
     [class*="col"] {
+        display: flex;
         list-style: none;
         padding: 0 $spacer--16 $spacer--32 $spacer--16;
     }
@@ -13,10 +12,21 @@
     &__item {
         background: $color--dark-white;
         cursor: pointer;
+        width: 100%;
+
+        // &:hover, &:focus-within {
+        //     .project-list__image img {
+        //         transform: scale(1.05);
+        //     }
+        // }
     }
 
     &__image {
-        @include aspect-ratio(16, 9);
+        overflow: hidden;
+        @include aspect-ratio(3, 2);
+        img {
+            transition: 0.2s ease-in-out;
+        }
     }
 
     &__body {
@@ -39,7 +49,7 @@
 
     &__link {
         @include unstyle-link;
-        @include h4;
+        @include h5;
         line-height: 1.33;
         flex: 1 1 auto;
     }
