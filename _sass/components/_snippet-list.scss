@@ -7,6 +7,8 @@
         background: $color--darker-white;
         list-style: none;
         cursor: pointer;
+        transition: $transition-short;
+        border: 1px solid $color--dark-white;
 
         & + & {
             margin-top: $spacer--32;
@@ -17,6 +19,10 @@
             & + & {
                 margin-top: $spacer--24;
             }
+        }
+
+        &:hover, &:focus-within {
+            background: $color--dark-white;
         }
     }
 

@@ -1,7 +1,7 @@
 .project-list {
     padding: 0;
     margin: 0 (-$spacer--16) (-$spacer--32) (-$spacer--16);
-    @include section-margin(top,0.5);
+    @include section-margin(top, 0.5);
 
     [class*="col"] {
         display: flex;
@@ -10,7 +10,14 @@
     }
 
     &__item {
-        background: $color--dark-white;
+        background: $color--darker-white;
+        transition: $transition-short;
+        border: 1px solid $color--dark-white;
+
+        &:hover,
+        &:focus-within {
+            background: $color--dark-white;
+        }
         cursor: pointer;
         width: 100%;
 
@@ -30,21 +37,23 @@
     }
 
     &__body {
-        padding: $spacer--24;
+        font-size: 14px;
+        padding: $spacer--16;
         & + & {
-            margin-top: $spacer--24;
+            margin-top: $spacer--16;
         }
 
         @include bp-tablet-up {
-            padding: $spacer--32;
+            padding: $spacer--24;
             & + & {
-                margin-top: $spacer--32;
+                margin-top: $spacer--24;
             }
         }
     }
 
     &__header {
         display: flex;
+        margin-bottom: $spacer--16;
     }
 
     &__link {
@@ -52,5 +61,6 @@
         @include h5;
         line-height: 1.33;
         flex: 1 1 auto;
+        margin: 0;
     }
 }
