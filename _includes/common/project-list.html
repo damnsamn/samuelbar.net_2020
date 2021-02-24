@@ -1,0 +1,31 @@
+<ul class="project-list row {% if include.horizontal %}project-list--horizontal{% endif %}">
+    {% for project in include.data %}
+    <li class="col-12 col-lg-6">
+        <div class="project-list__item" data-click=".project-list__link" {% if project.platform %} title="Opens in {{project.platform}}" {% endif %}>
+            {% if project.thumb %}
+            <div class="project-list__image">
+                <img src="{{project.thumb | relative_url}}" alt="" height="200">
+            </div>
+            {% endif %}
+            <div class="project-list__body">
+                <div class="project-list__header">
+                    <a class="project-list__link" href="{{ project.url | relative_url }}">
+                        {{project.title}}
+                        {% if include.external %}<span class="sr-only">(Opens in {{project.platform}})</span>{% endif %}
+                    </a>
+                    {% if include.external %}<i class="fas fa-external-link-alt"></i>{% endif %}
+                </div>
+                {% if project.tags %}
+                <div class="project-list__tags">
+                    {% for tag in project.tags %}
+                    {% include common/tag.html name=tag %}
+                    {% endfor%}
+                </div>
+                {% endif %}
+                {% if project.description %}<div class="project-list__description">{{project.description}}</div>{% endif %}
+            </div>
+
+        </div>
+    </li>
+    {% endfor %}
+</ul>

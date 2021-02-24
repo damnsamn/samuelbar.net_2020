@@ -8,7 +8,7 @@
 
     &__header {
         display: flex;
-        @include bp-mobile-down {
+        @include bp-tablet-down {
             flex-wrap: wrap;
             justify-content: center;
             text-align: center;
@@ -19,7 +19,7 @@
             height: auto;
             max-width: 100%;
         }
-        @include bp-mobile-down {
+        @include bp-tablet-down {
             order: 1;
             margin-top: $spacer--32;
         }
@@ -30,7 +30,7 @@
         flex: 1 0 auto;
         margin-left: $spacer--64;
 
-        @include bp-mobile-down {
+        @include bp-tablet-down {
             width: 100%;
             margin: 0;
         }

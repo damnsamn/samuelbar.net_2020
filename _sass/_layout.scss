@@ -1,12 +1,12 @@
 main.content {
-    @include page-padding(top);
-    @include page-padding(bottom);
+    @include section-padding(top);
+    @include section-padding(bottom);
 }
 
 .content-column {
     @include make-col-ready;
     @include make-col(10);
-    @include bp-mobile-down {
+    @include bp-tablet-down {
         margin-left: auto;
         margin-right: auto;
     }
@@ -19,5 +19,11 @@ main.content {
     @include bp-tablet-up {
         @include make-col(8);
         @include make-col-offset(2);
+    }
+}
+
+section.section {
+    & + & {
+        @include section-margin(top);
     }
 }

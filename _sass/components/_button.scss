@@ -1,4 +1,5 @@
 .button {
+    @include unstyle-link;
     display: inline;
     font-size: 18px;
     padding: calc(1em - 10px) 1em;
@@ -7,16 +8,20 @@
     background: $color--white;
     text-decoration: none;
     line-height: 1.27;
+    transition: $transition-short;
     &:not(.button--stroke) {
         outline-color: $color--white !important;
     }
-
     &--stroke {
         background: none;
         color: $color--white;
 
         position: relative;
-        @include pseudo-border(1px solid, inherit);
+        @include pseudo-border(2px solid, inherit);
+
+        @include hover-focus {
+            background: $color--dark-white;
+        }
     }
 
     &--small {
@@ -29,6 +34,10 @@
         }
         &[class*="button--stroke"] {
             color: $color--light-red;
+
+            @include hover-focus {
+                background: $color--dark-red;
+            }
         }
         &:not(.button--stroke) {
             outline-color: $color--light-red !important;
@@ -41,6 +50,10 @@
         }
         &[class*="button--stroke"] {
             color: $color--light-blue;
+
+            @include hover-focus {
+                background: $color--dark-blue;
+            }
         }
         &:not(.button--stroke) {
             outline-color: $color--light-blue !important;
@@ -53,6 +66,10 @@
         }
         &[class*="button--stroke"] {
             color: $color--light-green;
+
+            @include hover-focus {
+                background: $color--dark-green;
+            }
         }
         &:not(.button--stroke) {
             outline-color: $color--light-green !important;

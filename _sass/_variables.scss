@@ -27,9 +27,14 @@ $spacer--64: 64px;
 $spacer--96: 96px;
 $spacer--128: 128px;
 
+$border-radius: 5px;
+
 $font-weight--regular: 400;
 $font-weight--medium: 500;
 $font-weight--bold: 700;
+
+$transition-medium: 0.3s ease-in-out;
+$transition-short: 0.1s ease-in-out;
 
 // Breakpoints
 $bp--mobile: "md";

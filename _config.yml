@@ -5,11 +5,11 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "/samuelbar.net_2020" # the subpath of your site, e.g. /blog
 url: "https://damnsamn.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: damnsamn
-github_username:  damnsamn
+github_username: damnsamn
 
 host: 0.0.0.0
 
-include: ['_pages']
+include: ["_pages"]
 collections_dir: _collections
 collections:
   snippets:
@@ -18,8 +18,7 @@ collections:
   projects:
     output: true
     permalink: /:collection/:title
-
-
+    sort_by: order
 # Sass settings
 sass:
   add_charset: true

@@ -30,7 +30,7 @@
         display: flex;
         align-items: center;
 
-        @include bp-mobile-down {
+        @include bp-tablet-down {
             margin-left: $grid-gutter-width/2;
         }
 
@@ -47,9 +47,19 @@
         }
 
         a {
+            @include unstyle-link;
             z-index: 1;
             display: inline-block;
             margin-right: $spacer--32;
+            color: $color--black;
         }
+    }
+
+    &__navigation {
+        display: flex;
+        align-items: center;
+        flex: 1 1 auto;
+        margin-left: $spacer--48;
+        align-self: center;
     }
 }

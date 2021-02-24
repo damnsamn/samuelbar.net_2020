@@ -1,7 +1,4 @@
-.snippet {
-    .gist {
-        margin: 1.5em 0;
-    }
+.content {
 
     &__details {
         display: flex;
@@ -14,6 +11,14 @@
         }
     }
 
+    &__heading {
+        margin: 0;
+    }
+
+    &__description {
+        color: $color__text--dark;
+    }
+
     &__tags {
         display: flex;
         flex-wrap: wrap;
@@ -24,6 +29,11 @@
         @include bp-tablet-up {
             margin-right: $spacer--24;
         }
+    }
+
+    &__client {
+        font-weight: $font-weight--bold;
+        // color: $color__text--dark;
     }
 
     &__date {
@@ -43,6 +53,6 @@
     }
 
     &__body {
-        @include page-margin(top);
+        @include section-margin(top);
     }
 }

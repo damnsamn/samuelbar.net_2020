@@ -1,30 +1,33 @@
 .snippet-list {
     padding: 0;
-    @include page-margin(top);
+    @include section-margin(top, 0.5);
 
     &__item {
-        padding: $spacer--32;
+        padding: $spacer--24;
         background: $color--darker-white;
         list-style: none;
         cursor: pointer;
-
-        & + & {
-            margin-top: $spacer--32;
-        }
+        transition: $transition-short;
+        border: 1px solid $color--dark-white;
+        border-radius: $border-radius;
+        overflow: hidden;
 
         @include bp-mobile-down {
-            padding: $spacer--24;
-            & + & {
-                margin-top: $spacer--24;
-            }
+            border-color: rgba($color--white, 0.2);
+        }
+
+        & + & {
+            margin-top: $spacer--24;
+        }
+
+        &:hover, &:focus-within {
+            background: $color--dark-white;
         }
     }
 
     &__link {
-        color: $color--white;
+        @include unstyle-link;
         @include h4;
-        // display: block;
-        text-decoration: none;
     }
 
     &__description {

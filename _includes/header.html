@@ -3,16 +3,17 @@
     <div class="container">
         <div class="header__logo">
             <a href="{{ "/" | relative_url }}">
-                <img class="logo" alt="Sam Barnett Logo - Home" src="{{'/assets/images/logo.svg' | relative_url}}" height="50">
+                <img class="logo" alt="Sam Barnett Logo - Home" src="{{'/assets/images/logo.svg' | relative_url}}" height="50" width="118">
             </a>
         </div>
 
-        <div class="header__navigation">
+        <nav class="header__navigation">
             {% assign sorted_pages = site.html_pages | sort:"order" | where: "page", "true" %}
             {% for node in sorted_pages %}
-            <a href="{{node.url | relative_url}}">{{node.title}}</a>
+            <a class="nav-item" href="{{node.url}}">{{node.title}}</a>
             {% endfor %}
-        </div>
+            <a class="nav-item button button--small button--stroke ms-auto" href="mailto:samuel.barry.b@hotmail.com">Email me</a>
+        </nav>
 
     </div>
 </header>

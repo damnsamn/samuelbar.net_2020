@@ -1,5 +1,5 @@
 ---
-layout: snippet
+layout: content
 gist: 701134fba05b122fd74d2a4db225cd05
 tags:
     - HTML

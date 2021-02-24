@@ -114,3 +114,13 @@ em {
     font-style: normal;
     font-weight: $font-weight--bold;
 }
+
+a {
+    color: $color__text--dark;
+    text-decoration: none;
+    border-bottom: 1px dashed;
+}
+
+img {
+    max-width: 100%;
+}

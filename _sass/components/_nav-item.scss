@@ -1,0 +1,14 @@
+.nav-item {
+    @include unstyle-link;
+    display: inline-block;
+    color: $color--white;
+    text-decoration: none;
+    font-size: 18px;
+    &:not(.button) {
+        font-weight: $font-weight--bold;
+    }
+
+    & + & {
+        margin-left: 1.5em;
+    }
+}
