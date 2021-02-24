@@ -1,0 +1,16 @@
+.image {
+    text-align: center;
+    margin: 0.5em 0;
+
+    &__img {
+        max-width: 100%;
+        border-radius: 3px;
+    }
+
+    &__caption {
+        font-size: 14px;
+        font-weight: $font-weight--medium;
+        color: $color__text--dark;
+        padding: 0.5em 0.5em 0 0.5em;
+    }
+}

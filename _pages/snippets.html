@@ -17,7 +17,7 @@ permalink: /snippets
         <div class="snippet-list__description">{{snippet.description}}</div>
         <div class="snippet-list__tags">
             {% for tag in snippet.tags %}
-            {% include common/tag.html type=tag %}
+                {% include common/tag.html name=tag %}
             {% endfor %}
         </div>
     </li>
