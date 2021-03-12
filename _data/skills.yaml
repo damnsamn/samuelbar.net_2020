@@ -10,7 +10,7 @@
 - name: CSS3
   src: /assets/images/icons/icon-css.svg
   href: https://developer.mozilla.org/en-US/docs/Web/css/
-- name: Sass/SCSS
+- name: Sass
   src: /assets/images/icons/icon-sass.svg
   href: https://sass-lang.com/
 - name: JavaScript

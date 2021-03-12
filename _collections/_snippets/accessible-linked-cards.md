@@ -5,7 +5,7 @@ tags:
     - HTML
     - JavaScript
     - A11y
-description: Method for developing clickable linked cards without sacrificing the user experience for screen reader users.
+description: Method for developing clickable linked cards without sacrificing the user experience for screen reader users
 ---
 
 Having entire cards be their own clickable links is a common design pattern. However, housing an entire card's worth of information within an `<a>` tag can be problematic for users with screen readers, as the screen reader will read out the entire contents of the `<a>` tag. This is typically overly verbose and contains a lot of unnecessary information.
