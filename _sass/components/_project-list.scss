@@ -14,7 +14,7 @@
         background: $color--darker-white;
         transition: $transition-short;
         border: 1px solid $color--dark-white;
-        border-radius: $border-radius;
+        border-radius: $border-radius--medium;
         overflow: hidden;
         @include bp-mobile-down {
             border-color: rgba($color--white, 0.2);

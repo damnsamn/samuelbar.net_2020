@@ -6,15 +6,25 @@
         @include list-unstyled;
         display: flex;
         flex-wrap: wrap;
-        margin: -$grid-gutter-width/2;
+        justify-content: center;
         padding-top: $spacer--24;
+        margin: -$grid-gutter-width/2;
+        @include bp-desktop-up {
+            margin: -$grid-gutter-width;
+        }
     }
 
     &__item {
+        margin: 0;
         padding: $grid-gutter-width/2;
+        @include bp-desktop-up {
+            padding: $grid-gutter-width;
+        }
         a {
             @include unstyle-link;
             color: $color--white;
+            display: inline-block;
+            line-height: 0;
         }
         img {
             width: auto;
@@ -24,6 +34,9 @@
             }
             @include bp-tablet-up {
                 height: 80px;
+            }
+            @include bp-desktop-up {
+                height: 90px;
             }
         }
     }

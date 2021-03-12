@@ -2,7 +2,8 @@
     @include unstyle-link;
     display: inline;
     font-size: 18px;
-    padding: calc(1em - 10px) 1em;
+    padding: calc(1em - 10px) 1em calc(1em - 8px);
+    border-radius: $border-radius--small;
     font-weight: $font-weight--bold;
     color: $color--black;
     background: $color--white;
@@ -17,7 +18,11 @@
         color: $color--white;
 
         position: relative;
-        @include pseudo-border(2px solid, inherit);
+        @include pseudo-border(2px solid, inherit, $border-radius--small);
+        &::before {
+            border-bottom-width: 4px;
+            // bottom: -2px;
+        }
 
         @include hover-focus {
             background: $color--dark-white;

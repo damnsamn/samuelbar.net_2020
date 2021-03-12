@@ -1,0 +1,14 @@
+.tooltip {
+    display: none;
+    position: fixed;
+    pointer-events: none;
+    transform: translate($spacer--16, $spacer--16);
+
+    font-size: 14px;
+    padding: 0.5em;
+    color: $color--white;
+    background-color: $color--black;
+    border: 1px solid $color--white;
+    border-bottom-width: 2px;
+
+}
