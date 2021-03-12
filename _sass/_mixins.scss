@@ -93,12 +93,18 @@
     }
 }
 
+@mixin hover-focus {
+    &:hover, &:focus {
+        @content;
+    }
+}
+
 
 // Headings
 // Type scale: Major Third
 @mixin heading {
     font-weight: $font-weight--bold;
-    line-height: 1.5;
+    line-height: 1.25;
     margin: 1em 0 0.5em;
     &:first-child {
         margin-top: 0;

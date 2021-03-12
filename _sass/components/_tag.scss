@@ -3,23 +3,26 @@
     padding: 0.5em 0.75em;
     display: inline-block;
     border: 1px solid;
+    border-radius: 2px;
 
-    &__html {
-        color: $color__light-red;
-        border-color: rgba($color__light-red, 0.5);
-        background-color: $color__dark-red;
-    }
-    &__css {
-        color: $color__light-blue;
-        border-color: rgba($color__light-blue, 0.5);
-        background-color: $color__dark-blue;
-    }
-    &__javascript {
+    &,
+    &--white {
         color: $color__white;
         border-color: rgba($color__white, 0.5);
         background-color: $color__dark-white;
     }
-    &__a11y {
+
+    &--red {
+        color: $color__light-red;
+        border-color: rgba($color__light-red, 0.5);
+        background-color: $color__dark-red;
+    }
+    &--blue {
+        color: $color__light-blue;
+        border-color: rgba($color__light-blue, 0.5);
+        background-color: $color__dark-blue;
+    }
+    &--green {
         color: $color__light-green;
         border-color: rgba($color__light-green, 0.5);
         background-color: $color__dark-green;

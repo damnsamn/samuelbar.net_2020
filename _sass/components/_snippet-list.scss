@@ -3,20 +3,25 @@
     @include section-margin(top, 0.5);
 
     &__item {
-        padding: $spacer--32;
+        padding: $spacer--24;
         background: $color--darker-white;
         list-style: none;
         cursor: pointer;
+        transition: $transition-short;
+        border: 1px solid $color--dark-white;
+        border-radius: $border-radius;
+        overflow: hidden;
 
-        & + & {
-            margin-top: $spacer--32;
+        @include bp-mobile-down {
+            border-color: rgba($color--white, 0.2);
         }
 
-        @include bp-tablet-down {
-            padding: $spacer--24;
-            & + & {
-                margin-top: $spacer--24;
-            }
+        & + & {
+            margin-top: $spacer--24;
+        }
+
+        &:hover, &:focus-within {
+            background: $color--dark-white;
         }
     }
 

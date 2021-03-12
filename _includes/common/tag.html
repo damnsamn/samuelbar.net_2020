@@ -1,1 +1,15 @@
-<div class="tag tag__{{ include.type | downcase }}">{{include.type}}</div>
+{% assign name = include.name | downcase %}
+{% case name %}
+    {% when "javascript" %}
+        {% assign color = "white" %}
+    {% when "html" %}
+        {% assign color = "red" %}
+    {% when "css" %}
+        {% assign color = "blue" %}
+    {% when "a11y" %}
+        {% assign color = "green" %}
+    {% else %}
+        {% assign color = "white" %}
+{% endcase %}
+
+<div class="tag tag--{{ color }}">{{include.name}}</div>

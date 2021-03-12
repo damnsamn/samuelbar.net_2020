@@ -11,6 +11,14 @@
         }
     }
 
+    &__heading {
+        margin: 0;
+    }
+
+    &__description {
+        color: $color__text--dark;
+    }
+
     &__tags {
         display: flex;
         flex-wrap: wrap;
@@ -25,7 +33,7 @@
 
     &__client {
         font-weight: $font-weight--bold;
-        color: $color__text--dark;
+        // color: $color__text--dark;
     }
 
     &__date {
