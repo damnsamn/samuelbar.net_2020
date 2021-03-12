@@ -50,9 +50,34 @@ var userIsTabbing;
 
         })
 
-
-
-
     });
+
+})();
+
+(function doTooltips() {
+
+    function openTooltip(e) {
+        var $this = $(e.target.closest("[data-tooltip]")),
+            text = $this.data("tooltip"),
+            html = "<div class='tooltip'>" + text + "</div>";
+
+        $(html).appendTo("body").fadeIn(300).css({
+            top: e.clientY,
+            left: e.clientX
+        })
+    }
+    function moveTooltip(e) {
+        $(".tooltip").css({
+            top: e.clientY,
+            left: e.clientX
+        })
+    }
+    function closeTooltips() {
+        $(".tooltip").remove();
+    }
+
+    $("[data-tooltip]").mouseenter((e) => openTooltip(e));
+    $("[data-tooltip]").mousemove((e) => moveTooltip(e));
+    $("[data-tooltip]").mouseleave(closeTooltips)
 
 })();

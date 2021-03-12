@@ -10,15 +10,21 @@
 - name: CSS3
   src: /assets/images/icons/icon-css.svg
   href: https://developer.mozilla.org/en-US/docs/Web/css/
-- name: Sass
+- name: Sass/SCSS
   src: /assets/images/icons/icon-sass.svg
   href: https://sass-lang.com/
-- name: Javascript
+- name: JavaScript
   src: /assets/images/icons/icon-js.svg
   href: https://developer.mozilla.org/en-US/docs/Web/javascript/
 - name: Angular
   src: /assets/images/icons/icon-angular.svg
   href: https://www.angular.io/
+- name: React
+  src: /assets/images/icons/icon-react.svg
+  href: https://reactjs.org/
+- name: Three.js
+  src: /assets/images/icons/icon-three.svg
+  href: https://threejs.org/
 - name: Git
   src: /assets/images/icons/icon-git.svg
   href: https://git-scm.com/
