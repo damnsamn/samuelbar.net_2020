@@ -15,7 +15,7 @@
         <nav class="header__navigation">
             {% assign sorted_pages = site.html_pages | sort:"order" | where: "page", "true" %}
             {% for node in sorted_pages %}
-            <a class="nav-item" href="{{node.url}}">{{node.title}}</a>
+            <a class="nav-item" href="{{node.url | relative_url}}">{{node.title}}</a>
             {% endfor %}
             <a class="nav-item nav-item--right button button--small button--stroke" href="mailto:samuel.barry.b@hotmail.com">Email me</a>
         </nav>
