@@ -6,8 +6,8 @@
     <ul class="skills__list">
         {% for skill in site.data.skills %}
         <li class="skills__item">
-            <a href="{{ skill.href | relative_url }}" data-tooltip="{{skill.name}}">
-                <img src="{{skill.src}}" alt="Visit the {{skill.name}} website">
+            <a href="{{skill.href}}" data-tooltip="{{skill.name}}">
+                <img src="{{ skill.src | relative_url }}" alt="Visit the {{skill.name}} website">
             </a>
         </li>
         {% endfor %}
