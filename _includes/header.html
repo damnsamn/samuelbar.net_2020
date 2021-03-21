@@ -7,12 +7,17 @@
             </a>
         </div>
 
+        <button class="header__hamburger" aria-haspopup="true" aria-expanded="false">
+            <img src="{{'/assets/images/hamburger.svg' | relative_url}}" class="open" alt="">
+            <img src="{{'/assets/images/close.svg' | relative_url}}" class="close" alt="">
+            <span class="sr-only">Open menu</span>
+        </button>
         <nav class="header__navigation">
             {% assign sorted_pages = site.html_pages | sort:"order" | where: "page", "true" %}
             {% for node in sorted_pages %}
             <a class="nav-item" href="{{node.url}}">{{node.title}}</a>
             {% endfor %}
-            <a class="nav-item button button--small button--stroke ms-auto" href="mailto:samuel.barry.b@hotmail.com">Email me</a>
+            <a class="nav-item nav-item--right button button--small button--stroke" href="mailto:samuel.barry.b@hotmail.com">Email me</a>
         </nav>
 
     </div>

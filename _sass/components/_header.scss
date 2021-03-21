@@ -1,8 +1,14 @@
 .header {
     height: $height__header--mobile;
-    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: $zindex-fixed;
+    @include pseudo-background($color--black);
+    position: fixed;
 
     @include bp-tablet-up {
+        position: relative;
         height: $height__header--desktop;
     }
 
@@ -26,12 +32,17 @@
 
     &__logo {
         position: relative;
-        display: inline-block;
         display: flex;
+        flex: none;
         align-items: center;
 
         @include bp-tablet-down {
             margin-left: $grid-gutter-width/2;
+
+            img {
+                height: 40px;
+                width: auto;
+            }
         }
 
         &::before {
@@ -54,11 +65,98 @@
         }
     }
 
+    &__hamburger {
+        @include bp-tablet-up {
+            display: none;
+        }
+
+        display: inline-flex;
+        border: none;
+        background: none;
+        appearance: none;
+        align-self: center;
+        position: relative;
+        padding: 0;
+        margin-left: auto;
+        margin-right: 0.75rem;
+        transition: $transition--medium;
+        color: $color--white;
+        outline: none;
+        user-select: none;
+
+        .open,
+        .close {
+            transition: $transition--medium;
+        }
+
+        .close {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+        }
+    }
+
     &__navigation {
         display: flex;
         align-items: center;
         flex: 1 1 auto;
         margin-left: $spacer--48;
         align-self: center;
+
+        @include bp-tablet-down {
+            flex-direction: column;
+            margin: 0;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin-top: $height__header--mobile;
+            padding: $spacer--32;
+            background: $color--darker-white;
+            border: 1px solid $color--dark-white;
+            z-index: -1;
+            transform: translateY(0%);
+            transition: $transition--medium;
+
+            &:not(.visible) {
+                display: none;
+            }
+
+            &.slide {
+                transform: translateY(100%);
+            }
+        }
+
+        .nav-item {
+            &.nav-item--right {
+                @include bp-tablet-down {
+                    margin-top: $spacer--48;
+                }
+
+                @include bp-tablet-up {
+                    margin-left: auto;
+                    & + & {
+                        margin-left: 1.5em;
+                    }
+                }
+            }
+        }
+    }
+
+    @include bp-tablet-down {
+        &.expanded {
+            .header__hamburger {
+                transform: rotate(90deg);
+
+                .open {
+                    opacity: 0;
+                }
+                .close {
+                    opacity: 1;
+                }
+            }
+        }
     }
 }

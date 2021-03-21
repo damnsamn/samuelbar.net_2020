@@ -9,7 +9,7 @@
     background: $color--white;
     text-decoration: none;
     line-height: 1.27;
-    transition: $transition-short;
+    transition: $transition--short;
     &:not(.button--stroke) {
         outline-color: $color--white !important;
     }

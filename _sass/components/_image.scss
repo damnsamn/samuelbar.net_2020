@@ -9,7 +9,7 @@
     }
 
     &__caption {
-        font-size: 12px;
+        @include responsive-font-size(12px);
         font-weight: $font-weight--bold;
         color: $color__text--dark;
         padding: 0.25em 0.5em 0 0.75em;

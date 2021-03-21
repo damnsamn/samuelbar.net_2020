@@ -26,6 +26,21 @@
     border: none;
 }
 
+// Apply a pseudo-element background
+@mixin pseudo-background($color) {
+    position: relative;
+    &::before {
+        content: "";
+        pointer-events: none;
+        position: absolute;
+        background: $color;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+}
+
 // Apply a pseudo-element border, with a negative margin offset
 @mixin pseudo-border($style, $color, $radius: 0, $offset: 0) {
     position: relative;
@@ -110,7 +125,7 @@
 
     @if ($hoverable == true) {
         cursor: pointer;
-        transition: $transition-short;
+        transition: $transition--short;
 
         &:hover,
         &:focus-within {

@@ -1,3 +1,40 @@
+// jQuery Helper functions
+(function ($) {
+    $.fn.tabindex = function (n) {
+        if (n === false)
+            return this.removeAttr("tabindex");
+        else
+            return this.attr("tabindex", n);
+    }
+    $.fn.toggleTabindex = function () {
+        var val = this.attr("tabindex");
+        if (val === undefined)
+            val = 0;
+        val = val == 0 ? -1 : 0;
+        return this.attr("tabindex", val);
+    }
+    $.fn.ariaHasPopup = function (val) {
+        if (val !== null && val !== undefined)
+            return this.attr("aria-haspopup", val);
+        else
+            return console.error("$.ariaHasPopup() requires a value to set", this)
+    }
+    $.fn.ariaExpanded = function (val) {
+        if (val !== null && val !== undefined)
+            return this.attr("aria-expanded", val);
+        else if (val === null)
+            return this.attr("aria-expanded");
+        else
+            return console.error("$.ariaExpanded() requires a value to set", this)
+    }
+    $.fn.toggleAriaExpanded = function () {
+        var val = this.attr("aria-expanded");
+        // Convert from string bool to true bool
+        val = val === "true" ? true : false;
+        return this.attr("aria-expanded", !val);
+    }
+})(jQuery);
+
 // Add class to <body> when user is tabbing
 var userIsTabbing;
 (function tabbingBehaviour() {
@@ -32,23 +69,55 @@ var userIsTabbing;
     $("[data-click]").each(function () {
 
         var $this = $(this),
-
             $target = $($this).find($this.data("click"));
 
-
-
-
         $this.click(function () {
-
             if ($target.attr("href"))
-
                 window.location.href = $target.attr("href")
-
             else
-
                 return false;
-
         })
+    });
+
+})();
+
+(function navMenu() {
+
+    var $header = $(".header"),
+        $navigation = $(".header__navigation"),
+        transition = 200,
+        timeout;
+
+    $(".header__hamburger").click(function () {
+
+        $(this).toggleAriaExpanded();
+        $("html").toggleClass("faded");
+        $header.toggleClass("expanded");
+
+        // hey guys check out this fuckin mess!
+        // do literally anything else next time
+
+        if ($header.hasClass("expanded")) {
+            $navigation.addClass("visible");
+            clearTimeout(timeout);
+            timeout = setTimeout(function () {
+                $navigation.toggleClass("slide");
+                timeout = null;
+            }, 0);
+        }
+
+        else {
+            $navigation.toggleClass("slide");
+            if (timeout) {
+                $navigation.removeClass("visible");
+            }
+            else
+                timeout = setTimeout(function () {
+                    $navigation.removeClass("visible");
+                    clearTimeout(timeout);
+                    timeout = null;
+                }, transition);
+        }
 
     });
 

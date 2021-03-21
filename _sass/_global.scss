@@ -2,14 +2,28 @@ html,
 body {
     margin: 0;
     padding: 0;
-    min-height: 100vh;
-    overflow-x: hidden;
+    // min-height: 100vh;
+    // overflow-x: hidden;
+}
+html {
+    overflow-y: scroll;
+
+    &.faded body {
+        overflow: hidden;
+        &::after {
+            opacity: 0.8;
+            pointer-events: all;
+        }
+    }
 }
 
 body {
     font-family: "Source Code Pro", $font-family-monospace;
     color: $color__text;
     background: $color--black;
+    position: relative;
+    max-height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     line-height: 1.4;
@@ -19,6 +33,19 @@ body {
 
     @include bp-tablet-up {
         font-size: 16px;
+    }
+
+    &::after {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100vh;
+        background-color: $color--black;
+        opacity: 0;
+        pointer-events: none;
+        transition: $transition--medium;
     }
 }
 
