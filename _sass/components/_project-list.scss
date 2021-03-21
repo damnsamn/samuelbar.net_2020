@@ -11,27 +11,9 @@
     }
 
     &__item {
-        background: $color--darker-white;
-        transition: $transition-short;
-        border: 1px solid $color--dark-white;
-        border-radius: $border-radius--medium;
         overflow: hidden;
-        @include bp-mobile-down {
-            border-color: rgba($color--white, 0.2);
-        }
-
-        &:hover,
-        &:focus-within {
-            background: $color--dark-white;
-        }
-        cursor: pointer;
         width: 100%;
-
-        // &:hover, &:focus-within {
-        //     .project-list__image img {
-        //         transform: scale(1.05);
-        //     }
-        // }
+        @include card-style(true);
     }
 
     &__image {
