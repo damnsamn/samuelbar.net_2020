@@ -1,6 +1,6 @@
 ---
 layout: content
-order: 0
+order: 4
 title: WA Visitor's Centre Itinerary Builder
 client: Tourism WA
 description: A wall-sized touchscreen interface for building WA tourism itineraries in an easy and engaging way.

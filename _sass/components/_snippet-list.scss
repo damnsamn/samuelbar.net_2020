@@ -4,24 +4,12 @@
 
     &__item {
         padding: $spacer--24;
-        background: $color--darker-white;
         list-style: none;
-        cursor: pointer;
-        transition: $transition-short;
-        border: 1px solid $color--dark-white;
-        border-radius: $border-radius--medium;
         overflow: hidden;
-
-        @include bp-mobile-down {
-            border-color: rgba($color--white, 0.2);
-        }
+        @include card-style(true);
 
         & + & {
             margin-top: $spacer--24;
-        }
-
-        &:hover, &:focus-within {
-            background: $color--dark-white;
         }
     }
 

@@ -4,11 +4,19 @@
     color: $color--white;
     text-decoration: none;
     font-size: 18px;
+
     &:not(.button) {
         font-weight: $font-weight--bold;
     }
 
     & + & {
         margin-left: 1.5em;
+    }
+
+    @include bp-tablet-down {
+        margin-left: 0 !important;
+        & + & {
+            margin-top: 1em;
+        }
     }
 }

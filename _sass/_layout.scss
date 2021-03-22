@@ -1,6 +1,10 @@
 main.content {
     @include section-padding(top);
     @include section-padding(bottom);
+
+    @include bp-tablet-down {
+        margin-top: $height__header--mobile;
+    }
 }
 
 .content-column {

@@ -26,6 +26,21 @@
     border: none;
 }
 
+// Apply a pseudo-element background
+@mixin pseudo-background($color) {
+    position: relative;
+    &::before {
+        content: "";
+        pointer-events: none;
+        position: absolute;
+        background: $color;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+}
+
 // Apply a pseudo-element border, with a negative margin offset
 @mixin pseudo-border($style, $color, $radius: 0, $offset: 0) {
     position: relative;
@@ -99,12 +114,33 @@
     }
 }
 
+@mixin card-style($hoverable: false) {
+    background: $color--darker-white;
+    border: 1px solid $color--dark-white;
+    border-radius: $border-radius--medium;
+
+    @include bp-mobile-down {
+        border-color: rgba($color--white, 0.2);
+    }
+
+    @if ($hoverable == true) {
+        cursor: pointer;
+        transition: $transition--short;
+
+        &:hover,
+        &:focus-within {
+            background: $color--dark-white;
+        }
+
+    }
+}
+
 
 // Headings
 // Type scale: Major Third
 @mixin heading {
     font-weight: $font-weight--bold;
-    line-height: 1.25;
+    line-height: 1.15;
     margin: 1em 0 0.5em;
     &:first-child {
         margin-top: 0;
