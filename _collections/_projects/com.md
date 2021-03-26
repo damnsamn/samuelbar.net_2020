@@ -1,5 +1,5 @@
 ---
-layout: content
+layout: project
 order: 2
 title: City of Mandurah
 client: City of Mandurah

@@ -14,16 +14,6 @@
                         {% if page.description %}
                         <div class="content__description">{{page.description}}</div>
                         {% endif %}
-                        {% if page.client %}
-                        <div class="content__client">{{page.client}}</div>
-                        {% endif %}
-                        {% if page.tags %}
-                        <div class="content__tags">
-                            {% for tag in page.tags %}
-                            {% include common/tag.html name=tag %}
-                            {% endfor %}
-                        </div>
-                        {% endif %}
                     </div>
                     <div class="content__body">
 

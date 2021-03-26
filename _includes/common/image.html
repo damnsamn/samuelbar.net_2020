@@ -1,4 +1,4 @@
 <div class="image {{include.class}}">
-    <img class="image__img" alt="{{include.alt}}" src="{{include.src}}">
+    <img class="image__img" alt="{{include.alt}}" src="{{ include.src | relative_url }}">
     {% if include.caption %}<div class="image__caption">{{include.caption}}</div>{% endif %}
 </div>

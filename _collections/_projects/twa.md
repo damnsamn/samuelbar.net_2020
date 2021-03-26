@@ -1,5 +1,5 @@
 ---
-layout: content
+layout: project
 order: 4
 title: WA Visitor's Centre Itinerary Builder
 client: Tourism WA
@@ -12,7 +12,7 @@ tags: [
 ---
 {% include common/image.html alt="Final mockup screen with a panel for browsing destinations, a panel for viewing destinations on a map, and a panel for managing/reordering the itinerary" src="/assets/images/projects/TWA/Mockup.jpg" caption="Final full-screen mockup, square destination tiles approx. palm-sized" %}
 
-The <a class="link link-blue link-external" href="https://www.wavisitorcentre.com.au/" title="Visit Western Australian Visitor Centre Website">Western Australian Visitor Centre</a> were looking to create an engaging and collaborative experience for tourists visiting the centre to find local attractions and destinations. Currently, the staff were having to recommend and direct visitors to specific attractions in one-to-one interactions. They would also write out physical itineraries for visitors by request - a labour and time intensive process.
+The <a href="https://www.wavisitorcentre.com.au/" title="Visit Western Australian Visitor Centre Website">Western Australian Visitor Centre</a> were looking to create an engaging and collaborative experience for tourists visiting the centre to find local attractions and destinations. Currently, the staff were having to recommend and direct visitors to specific attractions in one-to-one interactions. They would also write out physical itineraries for visitors by request - a labour and time intensive process.
 
 They came to us having ordered an enormous wall-scale touchscreen - two-and-a-half metres wide - with a single requirement: a single page that links to existing Tourism WA assets. A simple goal, but working with such an unfamiliar scale, I got excited. I wanted to create something a little more useful and interactive.
 

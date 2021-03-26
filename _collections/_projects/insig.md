@@ -1,17 +1,17 @@
 ---
-layout: content
+layout: project
 order: 0
 title: Genesis Condition Monitoring System
 client: InSig Technologies
 description: A platform for monitoring and analysing real-time data during mining operations.
-thumb: /assets/images/projects/InSig/Dashboard.png
+thumb: /assets/images/projects/InSig/dashboard-1080x0.5.png
 tags: [
     UX Design,
     Design Systems
 ]
 ---
 
-{% include common/image.html alt="A configurable, real-time dashboard screen - with tables and graphs laid out in a grid" src="/assets/images/projects/InSig/Dashboard.png" caption="These tables and graphs update in real-time, using data from sensors or operators' manual entry" %}
+{% include common/image.html alt="A configurable, real-time dashboard screen - with tables and graphs laid out in a grid" src="/assets/images/projects/InSig/dashboard-1080x1.png" caption="These tables and graphs update in real-time, using data from sensors or operators' manual entry" %}
 
 InSig Technologies were building a prototype of the system when I was brought on board. Some of the functionality was complete, but the visual design left something to be desired. This product was to be the basis of InSig's future product development - so alongside the User Experience, I was also tasked with creating a robust and consistent design system for new products to come.
 
