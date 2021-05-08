@@ -6,6 +6,7 @@
     z-index: $zindex-fixed;
     @include pseudo-background($color--black);
     position: fixed;
+    flex: none;
 
     @include bp-tablet-up {
         position: relative;

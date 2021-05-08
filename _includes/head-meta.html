@@ -1,0 +1,36 @@
+{% capture title  %}{% if page.title %}{{ page.title | escape }} | {{ site.suffix }}{% else %}{{ site.title | escape }}{% endif %}{% endcapture %}
+
+
+{% if page.desc-long %}
+{% assign desc = page.desc-long %}
+{% else %}
+{% assign desc = page.desc %}
+{% endif %}
+
+{% assign description = desc | default: site.description | strip_html | normalize_whitespace | truncate: 200 | escape %}
+
+{% capture page_url  %}{{site.url}}{{ page.url | replace:'index.html','' }}{% endcapture %}
+
+{% capture img %}{{ 'assets/meta-banner.png' | absolute_url }}{% endcapture %}
+
+
+<!-- Primary Meta Tags -->
+<title>{{title}}</title>
+<meta name="title" content="{{title}}">
+<meta name="description" content="{{description}}">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{page_url}}">
+<meta property="og:title" content="{{title}}">
+<meta property="og:description" content="{{description}}">
+<meta property="og:image" content="{{img}}">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="{{page_url}}">
+<meta property="twitter:title" content="{{title}}">
+<meta property="twitter:description" content="{{description}}">
+<meta property="twitter:image" content="{{img}}">
+
+<link rel="canonical" href="{{page_url}}">
