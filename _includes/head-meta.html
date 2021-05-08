@@ -7,7 +7,7 @@
 {% assign desc = page.desc %}
 {% endif %}
 
-{% assign description = desc | default: site.description | strip_html | normalize_whitespace | truncate: 200 | escape %}
+{% assign description = desc | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape %}
 
 {% capture page_url  %}{{site.url}}{{ page.url | replace:'index.html','' }}{% endcapture %}
 
