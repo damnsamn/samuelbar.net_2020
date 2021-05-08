@@ -5,7 +5,7 @@ tags:
     - JavaScript
     - CSS
     - A11y
-description: Remove and/or replace browser-default focus styles without impeding the experience of mouse users or tab-navigation
+desc:  Remove and/or replace browser-default focus styles without impeding the experience of mouse users or tab-navigation
 ---
 
 It's a fairly common practice for developers to remove the browser's default focus styles when clicked links or buttons don't match up with the look and feel of the site. However, doing so without defining alternative focus styles is bad for accessibility - people who navigate by tabbing through interactible elements rely on the focus styles to know where they are on the page and what they're interacting with.

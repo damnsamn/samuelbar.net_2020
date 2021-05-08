@@ -1,20 +1,20 @@
 - title: Chess
-  description: After searching in vain for a simple chess experience to play with friends, I decided to create my own.
+  desc:  After searching in vain for a simple chess experience to play with friends, I decided to create my own.
   thumb: /assets/images/projects/personal/chess.png
   url: https://damnsamn.github.io/chess
   platform: Github
 - title: star.io
-  description: A small experimental game based on the hugely popular agar.io, but with stars, gravity and orbital mechanics.
+  desc:  A small experimental game based on the hugely popular agar.io, but with stars, gravity and orbital mechanics.
   thumb: /assets/images/projects/personal/stario.png
   url: https://damnsamn.github.io/star.io
   platform: Github
 - title: ASCII Art Generator
-  description: An experimental JS tool to convert images into ASCII art, which can then be saved as an image or copied as text.
+  desc:  An experimental JS tool to convert images into ASCII art, which can then be saved as an image or copied as text.
   thumb: /assets/images/projects/personal/ascii.png
   url: https://codepen.io/damnsamn/pen/MWYYEJZ
   platform: Codepen
 - title: Volume Golf
-  description: What if your volume slider was a 1-dimensional golf game? My contribution to the trend of comically un-usable volume controls.
+  desc:  What if your volume slider was a 1-dimensional golf game? My contribution to the trend of comically un-usable volume controls.
   thumb: /assets/images/projects/personal/golf.png
   url: https://codepen.io/damnsamn/pen/wvwJEwg
   platform: Codepen

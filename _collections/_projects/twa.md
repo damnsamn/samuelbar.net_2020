@@ -3,7 +3,7 @@ layout: project
 order: 4
 title: WA Visitor's Centre Itinerary Builder
 client: Tourism WA
-description: A wall-sized touchscreen interface for building WA tourism itineraries in an easy and engaging way.
+desc:  A wall-sized touchscreen interface for building WA tourism itineraries in an easy and engaging way.
 thumb: /assets/images/projects/TWA/Mockup.jpg
 tags: [
     UX Design,

@@ -3,7 +3,7 @@ layout: project
 order: 0
 title: Genesis Condition Monitoring System
 client: InSig Technologies
-description: A platform for monitoring and analysing real-time data during mining operations.
+desc:  A platform for monitoring and analysing real-time data during mining operations.
 thumb: /assets/images/projects/InSig/dashboard-1080x0.5.png
 tags: [
     UX Design,
