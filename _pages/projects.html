@@ -12,7 +12,8 @@ desc: I take immense pride in the variety and quality of the work I produce and 
 
     <p>{{page.desc}}</p>
 
-    {% include common/project-list.html data=site.projects %}
+    {% assign sorted_projects = site.projects | sort: "order"   %}
+    {% include common/project-list.html data=sorted_projects %}
 </section>
 
 <section class="section">
@@ -20,7 +21,7 @@ desc: I take immense pride in the variety and quality of the work I produce and 
 
     <p>Outside of work, I also love challenging myself and learning through small creative projects for fun. You can see a collection of these personal projects below.</p>
 
-    {% assign personal = site.data.personal | sort: "order" %}
-    {% include common/project-list.html data=personal external="true" horizontal="true"%}
+    {% assign sorted_personal = site.data.personal | sort: "order" %}
+    {% include common/project-list.html data=sorted_personal external="true" horizontal="true"%}
 </section>
 </section>
