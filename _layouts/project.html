@@ -11,30 +11,38 @@
                 <div class="content-column">
                     <div class="content__details">
                         <h1 class="content__heading">{{page.title}}</h1>
+                        {% if page.client and page.client != page.title %}
+                        <div class="content__client">{{page.client}}</div>
+                        {% endif %}
                         {% if page.desc %}
                         <div class="content__description">{{page.desc}}</div>
                         {% endif %}
-                        {% if page.client %}
-                        <div class="content__client">{{page.client}}</div>
+                        {% if page.tags or page.technologies %}
+                        <div class="content__meta">
+                            {% if page.tags %}
+                            <div class="content__taglist">
+                                <div class="content__label">Skillsets:</div>
+                                <div class="content__tags">
+                                    {% for tag in page.tags %}
+                                    {% include common/tag.html name=tag %}
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            {% endif %}
+                            {% if page.technologies %}
+                            <div class="content__taglist">
+                                <div class="content__label">Technologies:</div>
+                                <div class="content__tags">
+                                    {% for tag in page.technologies %}
+                                    {% include common/tag.html name=tag %}
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            {% endif %}
+                        </div>
                         {% endif %}
                         {% if page.external %}
-                        <a href="{{page.external}}" class="button button--stroke ms-auto">Visit Project</a>
-                        {% endif %}
-                        {% if page.tags %}
-                        <div class="content__label">Skillsets:</div>
-                        <div class="content__tags">
-                            {% for tag in page.tags %}
-                            {% include common/tag.html name=tag %}
-                            {% endfor %}
-                        </div>
-                        {% endif %}
-                        {% if page.technologies %}
-                        <div class="content__label">Technologies:</div>
-                        <div class="content__tags">
-                            {% for tag in page.technologies %}
-                            {% include common/tag.html name=tag %}
-                            {% endfor %}
-                        </div>
+                        <a href="{{page.external}}" class="content__button button button--stroke ms-auto">Visit Project</a>
                         {% endif %}
 
                     </div>

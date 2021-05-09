@@ -1,9 +1,8 @@
 .content {
-
     &__details {
         display: flex;
         flex-wrap: wrap;
-        flex-direction: column;
+        // flex-direction: column;
         margin: -$spacer--8 0;
 
         > * {
@@ -12,35 +11,55 @@
     }
 
     &__heading {
-        // margin: 0;
+        width: 100%;
     }
 
     &__label {
         font-weight: $font-weight--bold;
         color: $color__text--dark;
         @include responsive-font-size(14px);
-        margin-bottom: 0;
+        margin-bottom: 0.25em;
+        flex: 100%;
     }
 
     &__description {
+        width: 100%;
         color: $color__text--dark;
+    }
+
+    &__meta {
+        display: flex;
+        width: 100%;
+    }
+
+    &__taglist {
+        display: inline-flex;
+        flex-wrap: wrap;
+        flex: 1 1 auto;
+        padding-left: $spacer--32;
+        padding-right: $spacer--32;
+        margin-left: -$spacer--32;
+        margin-right: -$spacer--32;
+
+        & + & {
+            text-align: right;
+            justify-content: flex-end;
+        }
     }
 
     &__tags {
         display: flex;
         flex-wrap: wrap;
+        justify-content: inherit;
         align-items: flex-start;
         .tag + .tag {
             margin-left: $spacer--16;
         }
-        @include bp-tablet-up {
-            margin-right: $spacer--24;
-        }
     }
 
     &__client {
+        width: 100%;
         font-weight: $font-weight--bold;
-        // color: $color__text--dark;
     }
 
     &__date {
@@ -57,6 +76,10 @@
         span {
             margin-left: 1em;
         }
+    }
+
+    &__button {
+        margin-top: $spacer--16;
     }
 
     &__body {
