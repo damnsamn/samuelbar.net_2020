@@ -11,3 +11,7 @@ tags: [
     UX Advising,
 ]
 ---
+
+To coincide with the launch of their new brand identity, <a href="https://www.mandurah.wa.gov.au/">City of Mandurah</a> were also looking to launch a brand-new website. With a key objective being to help users to find their desired civic services quicker and easier than ever, while also showcasing all that Mandurah has to offer.
+
+While another agency carried out the UX Designs, I was tasked with providing input on the designs from a development perspective to ensure that the scope of designed components and screens could be reasonably developed within the projects budget and timeline.
