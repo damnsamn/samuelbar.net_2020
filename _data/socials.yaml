@@ -1,0 +1,9 @@
+- name: Twitter
+  href: https://twitter.com/damnsamn
+  icon: fab fa-twitter
+- name: Github
+  href: https://github.com/damnsamn
+  icon: fab fa-github
+- name: Codepen
+  href: https://codepen.io/damnsamn
+  icon: fab fa-codepen

@@ -125,6 +125,10 @@ var userIsTabbing;
 
 (function doTooltips() {
 
+    $("[data-tooltip]").each(function() {
+        $(this).attr("aria-label", $(this).data("tooltip"));
+    })
+
     function openTooltip(e) {
         var $this = $(e.target.closest("[data-tooltip]")),
             text = $this.data("tooltip"),

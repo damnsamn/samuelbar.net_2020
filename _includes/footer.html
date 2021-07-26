@@ -1,6 +1,15 @@
 <!-- start footer.html -->
 <footer class="footer">
     <div class="container">
+        <ul class="footer__social">
+            {% for social in site.data.socials %}
+                <li>
+                    <a class="footer__social-item" href="{{social.href}}" data-tooltip="Find me on {{social.name}}">
+                        <i class="{{social.icon}}"></i>
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
         <nav class="footer__navigation">
             {% assign sorted_pages = site.html_pages | sort:"order" | where: "page", "true" %}
             {% for node in sorted_pages %}

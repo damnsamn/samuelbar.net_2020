@@ -34,11 +34,4 @@
             right: 0;
         }
     }
-
-    @include bp-tablet-down {
-        margin-left: 0 !important;
-        & + & {
-            margin-top: 1em;
-        }
-    }
 }

@@ -143,6 +143,13 @@
                     }
                 }
             }
+
+            @include bp-tablet-down {
+                margin-left: 0 !important;
+                & + .nav-item {
+                    margin-top: 1em;
+                }
+            }
         }
     }
 
