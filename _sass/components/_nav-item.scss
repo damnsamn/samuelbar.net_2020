@@ -1,16 +1,38 @@
 .nav-item {
     @include unstyle-link;
     display: inline-block;
-    color: $color--white;
+    color: $color__text;
     text-decoration: none;
-    font-size: 18px;
+    font-size: rem(18px);
+    position: relative;
 
     &:not(.button) {
         font-weight: $font-weight--bold;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: calc(100% + 0.075em);
+            left: 0;
+            // right: 0;
+            right: 100%;
+            background-color: $color__text;
+            height: 2px;
+            // height: 0;
+            border-radius: 1000px;
+            transition: $transition--short;
+        }
     }
 
     & + & {
         margin-left: 1.5em;
+    }
+
+    @include hover-focus {
+        &::after {
+            // height: 2px;
+            right: 0;
+        }
     }
 
     @include bp-tablet-down {

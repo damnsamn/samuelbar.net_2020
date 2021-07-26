@@ -42,7 +42,15 @@
 }
 
 // Apply a pseudo-element border, with a negative margin offset
-@mixin pseudo-border($style, $color, $radius: 0, $offset: 0) {
+@mixin pseudo-border(
+    $style,
+    $color,
+    $radius: 0,
+    $offsetT: 0,
+    $offsetR: $offsetT,
+    $offsetB: $offsetT,
+    $offsetL: $offsetR
+) {
     position: relative;
     &::before {
         content: "";
@@ -51,10 +59,10 @@
         color: $color;
         border: $style;
         border-radius: $radius;
-        left: -$offset;
-        right: -$offset;
-        top: -$offset;
-        bottom: -$offset;
+        left: -$offsetL;
+        right: -$offsetR;
+        top: -$offsetT;
+        bottom: -$offsetB;
         z-index: 1;
     }
 }
@@ -63,9 +71,9 @@
 @mixin child-cover() {
     position: relative;
 
-    >img,
-    >video,
-    >iframe {
+    > img,
+    > video,
+    > iframe {
         position: absolute;
         top: 0;
         left: 0;
@@ -90,18 +98,34 @@
     }
 }
 
+// Pass a px value as the argument, return its appropriate rem value relative to 16px default
+// Use rem values for WCAG, which will scale nicely with browser/OS-set default font sizes.
+@function rem($px-value) {
+    $rem: 16px;
+    @return ($px-value/$rem) * 1rem;
+}
+
+// Multiply a value normalised to 1rem instead of 0.
+// (100px, 0) == 16px
+// (100px, 0.5) == 58px
+// (100px, 1) == 100px
+@function normalise-to-1rem($value, $multiplier) {
+    @return calc(((#{$value} - 1rem) * #{$multiplier}) + 1rem);
+}
+
 // Resize font responsively by a factor of 1rem.
 // This mixin will scale down the $size by certain factors per breakpoint.
 // Take difference between $size and $rem, divide that by value
 @mixin responsive-font-size($size) {
-    font-size: calc(#{$size} - ((#{$size} - 1rem) / 1.6)) !important;
+
+    font-size: normalise-to-1rem($size, 0.375);
 
     @include bp-tablet-up {
-    font-size: calc(#{$size} - ((#{$size} - 1rem) / 2)) !important;
+        font-size: normalise-to-1rem($size, 0.5);
     }
 
     @include bp-laptop-up {
-        font-size: calc(#{$size} - ((#{$size} - 1rem) / 3)) !important;
+        font-size: normalise-to-1rem($size, 0.66);
     }
     @include bp-desktop-up {
         font-size: $size !important;
@@ -109,7 +133,8 @@
 }
 
 @mixin hover-focus {
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
         @content;
     }
 }
@@ -131,10 +156,8 @@
         &:focus-within {
             background: $color--dark-white;
         }
-
     }
 }
-
 
 // Headings
 // Type scale: Major Third

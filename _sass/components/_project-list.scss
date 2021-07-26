@@ -25,7 +25,7 @@
     }
 
     &__body {
-        font-size: 14px;
+        font-size: rem(14px);
         padding: $spacer--16;
         > * + * {
             margin-top: $spacer--16;
