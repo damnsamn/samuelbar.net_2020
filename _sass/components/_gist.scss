@@ -23,6 +23,19 @@ body .gist {
         }
     }
 
+    .blob-num {
+        &,
+        &:hover {
+            color: rgba($color--white, 0.3);
+        }
+        &:hover {
+            &,
+            + * {
+                background: $color--dark-white;
+            }
+        }
+    }
+
     .highlight {
         display: block;
         background: none;
