@@ -1,5 +1,5 @@
 ---
-layout: content
+layout: snippet
 gist: b7d227aee70b8e6379808ecc42c62d50
 tags:
     - JavaScript

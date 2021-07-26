@@ -9,6 +9,9 @@ tags: [
     UX Design,
     Design Systems
 ]
+technologies: {
+    Figma
+}
 ---
 
 {% include common/image.html alt="A configurable, real-time dashboard screen - with tables and graphs laid out in a grid" src="/assets/images/projects/InSig/dashboard-1080x1.png" caption="These tables and graphs update in real-time, using data from sensors or operators' manual entry" %}

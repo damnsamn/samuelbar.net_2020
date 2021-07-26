@@ -3,8 +3,8 @@ suffix: "Sam Barnett, Perth UX Developer"
 email: your-email@example.com
 desc:  >- # this means to ignore newlines until "baseurl:"
   A Front-end Developer and User Experience Designer. I design and develop websites and other digital experiences, currently based in Perth, Western Australia.
-baseurl: "/samuelbar.net_2020" # the subpath of your site, e.g. /blog
-url: "https://damnsamn.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://samuelbar.net" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: damnsamn
 github_username: damnsamn
 
@@ -26,5 +26,5 @@ sass:
   sass_dir: _sass
   style: compressed
 
-plugins:
-  - jekyll-autoprefixer
+# plugins:
+#   - jekyll-autoprefixer

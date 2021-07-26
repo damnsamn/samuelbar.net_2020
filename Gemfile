@@ -13,9 +13,9 @@ gem "jekyll", "~> 4.2.0"
 # gem "github-pages", group: :jekyll_plugins
 
 # If you have any plugins, put them here!
-group :jekyll_plugins do
-  gem 'jekyll-autoprefixer'
-end
+# group :jekyll_plugins do
+#   gem 'jekyll-autoprefixer'
+# end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
 # and associated library.
@@ -27,5 +27,5 @@ end
 # Performance-booster for watching directories on Windows
 gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
 
-# gem 'eventmachine', '~> 1.2.7', platform: :ruby
-gem 'eventmachine', '1.2.7', git: 'git@github.com:eventmachine/eventmachine', tag: 'v1.2.7'
+gem 'eventmachine', '~> 1.2.7'
+# gem 'eventmachine', '1.2.7', git: 'git@github.com:eventmachine/eventmachine', tag: 'v1.2.7'

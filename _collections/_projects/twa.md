@@ -9,6 +9,9 @@ tags: [
     UX Design,
     Human-scale
 ]
+technologies: {
+    Adobe XD
+}
 ---
 {% include common/image.html alt="Final mockup screen with a panel for browsing destinations, a panel for viewing destinations on a map, and a panel for managing/reordering the itinerary" src="/assets/images/projects/TWA/Mockup.jpg" caption="Final full-screen mockup, square destination tiles approx. palm-sized" %}
 
