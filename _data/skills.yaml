@@ -22,6 +22,9 @@
 - name: React
   src: /assets/images/icons/icon-react.svg
   href: https://reactjs.org/
+- name: Vue 3
+  src: /assets/images/icons/icon-vue.svg
+  href: https://v3.vuejs.org/
 - name: Three.js
   src: /assets/images/icons/icon-three.svg
   href: https://threejs.org/

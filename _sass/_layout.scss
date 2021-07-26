@@ -5,17 +5,32 @@ main.content {
     @include bp-tablet-down {
         margin-top: $height__header--mobile;
     }
+
+    &.home {
+        @include component-padding(top);
+        @include component-padding(bottom);
+    }
 }
 
 .content-column {
     @include make-col-ready;
-    @include make-col(10);
-    @include bp-tablet-down {
-        margin-left: auto;
-        margin-right: auto;
+    @include make-col(12);
+    padding-left: $grid-gutter-width;
+    padding-right: $grid-gutter-width;
+    // @include bp-tablet-down {
+    //     margin-left: auto;
+    //     margin-right: auto;
+    // }
+
+    > :first-child {
+        margin-top: 0;
+    }
+    > :last-child {
+        margin-bottom: 0;
     }
 
     @include bp-mobile-up {
+        @include make-col-ready;
         @include make-col(10);
         @include make-col-offset(1);
     }

@@ -5,8 +5,6 @@ desc:  >- # this means to ignore newlines until "baseurl:"
   A Front-end Developer and User Experience Designer. I design and develop websites and other digital experiences, currently based in Perth, Western Australia.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://samuelbar.net" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: damnsamn
-github_username: damnsamn
 
 host: 0.0.0.0
 

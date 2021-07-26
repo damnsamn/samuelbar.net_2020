@@ -17,7 +17,7 @@
     &__label {
         font-weight: $font-weight--bold;
         color: $color__text--dark;
-        @include responsive-font-size(14px);
+        @include responsive-font-size(rem(14px));
         margin-bottom: 0.25em;
         flex: 100%;
     }
@@ -63,7 +63,7 @@
     }
 
     &__date {
-        font-size: 14px;
+        font-size: rem(14px);
         opacity: 0;
         transition: 0.5s ease;
         &.set {

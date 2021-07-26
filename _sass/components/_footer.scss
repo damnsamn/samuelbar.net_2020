@@ -1,7 +1,7 @@
 .footer {
     position: relative;
     padding: $spacer--32 0;
-    font-size: 16px;
+    font-size: rem(16px);
 
     &::before {
         content: "";
@@ -22,6 +22,31 @@
 
         @include bp-mobile-down {
             flex-direction: column;
+        }
+    }
+
+    &__social {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        list-style: none;
+        padding: 0;
+        margin: (-$spacer--8/2) (-$spacer--8/2) ($spacer--8);
+
+        > li {
+            margin: 0;
+            padding: $spacer--8/2;
+        }
+
+        &-item {
+            display: inline-block;
+            color: $color--white;
+            padding: $spacer--8;
+            font-size: rem(26px);
+            border: none;
+            line-height: 1;
         }
     }
 

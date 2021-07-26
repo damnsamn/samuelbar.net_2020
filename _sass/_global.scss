@@ -6,7 +6,7 @@ body {
     // overflow-x: hidden;
 }
 html {
-    overflow-y: scroll;
+    // overflow-y: auto;
 
     &.faded body {
         overflow: hidden;
@@ -32,7 +32,7 @@ body {
     }
 
     @include bp-tablet-up {
-        font-size: 16px;
+        font-size: rem(16px);
     }
 
     &::after {
@@ -65,15 +65,19 @@ main.content {
     }
 
     &::before {
-        right: calc(100% - #{$grid-gutter-width});
-        @include bp-tablet-up {
+        @include media-breakpoint-down(sm) {
+            left: $grid-gutter-width/2;
+        }
+        @include media-breakpoint-up(sm) {
             right: 100%;
         }
     }
 
     &::after {
-        left: calc(100% - #{$grid-gutter-width});
-        @include bp-tablet-up {
+        @include media-breakpoint-down(sm) {
+            right: $grid-gutter-width/2;
+        }
+        @include media-breakpoint-up(sm) {
             left: 100%;
         }
     }
@@ -139,7 +143,6 @@ pre.highlight {
     > code {
         padding: 0;
     }
-
 }
 
 code {

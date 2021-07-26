@@ -1,7 +1,7 @@
 .button {
     @include unstyle-link;
-    display: inline;
-    font-size: 18px;
+    display: inline-block;
+    font-size: rem(18px);
     padding: calc(1em - 10px) 1em calc(1em - 8px);
     border-radius: $border-radius--small;
     font-weight: $font-weight--bold;
@@ -10,32 +10,73 @@
     text-decoration: none;
     line-height: 1.27;
     transition: $transition--short;
+    position: relative;
+    bottom: 0;
+
     &:not(.button--stroke) {
         outline-color: $color--white !important;
     }
-    &--stroke {
-        background: none;
-        color: $color--white;
 
-        position: relative;
-        @include pseudo-border(2px solid, inherit, $border-radius--small);
-        &::before {
-            border-bottom-width: 4px;
-            // bottom: -2px;
+    &::before,
+    &::after {
+        transition: inherit;
+        pointer-events: bounding-box !important;
+    }
+
+    &:not(&--stroke) {
+        @include pseudo-border(2px solid, $color--white, $border-radius--small, 0);
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 2px;
+            right: 2px;
+            height: 0;
+            background-color: $color--dark-white;
         }
 
         @include hover-focus {
-            background: $color--dark-white;
+            bottom: 2px;
+            &::before {
+                bottom: -2px;
+            }
+            &::after {
+                height: 4px;
+            }
+        }
+    }
+
+    &--stroke {
+        background: none;
+        color: $color--white;
+        @include pseudo-border(2px solid, inherit, $border-radius--small);
+        &::before {
+            border-bottom-width: 4px;
+        }
+
+        @include hover-focus {
+            bottom: 2px;
+            background: inherit;
+            &::before {
+                border-bottom-width: 6px;
+                bottom: -2px;
+            }
         }
     }
 
     &--small {
-        font-size: 16px;
+        font-size: rem(16px);
     }
 
     &--red {
         &:not([class*="button--stroke"]) {
             background-color: $color--light-red;
+            &::before {
+                border-color: $color--light-red;
+            }
+            &::after {
+                background-color: $color--dark-red;
+            }
         }
         &[class*="button--stroke"] {
             color: $color--light-red;
@@ -52,6 +93,12 @@
     &--blue {
         &:not([class*="button--stroke"]) {
             background-color: $color--light-blue;
+            &::before {
+                border-color: $color--light-blue;
+            }
+            &::after {
+                background-color: $color--dark-blue;
+            }
         }
         &[class*="button--stroke"] {
             color: $color--light-blue;
@@ -68,6 +115,12 @@
     &--green {
         &:not([class*="button--stroke"]) {
             background-color: $color--light-green;
+            &::before {
+                border-color: $color--light-green;
+            }
+            &::after {
+                background-color: $color--dark-green;
+            }
         }
         &[class*="button--stroke"] {
             color: $color--light-green;

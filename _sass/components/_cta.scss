@@ -1,36 +1,32 @@
 .cta {
     @include component-margin(top);
     @include component-margin(bottom);
-    margin-left: -$spacer--32;
-    margin-right: -$spacer--32;
+    // margin-left: -$spacer--16;
+    // margin-right: -$spacer--16;
     justify-content: center;
 
-    &:last-child {
-        margin-bottom: 0;
-    }
-
-    @include bp-tablet-down {
+    @include bp-mobile-up {
         margin-left: -$spacer--24;
         margin-right: -$spacer--24;
     }
 
-    @include bp-tablet-down {
-        margin-left: -$spacer--16;
-        margin-right: -$spacer--16;
+    @include bp-tablet-up {
+        margin-left: -$spacer--32;
+        margin-right: -$spacer--32;
     }
 
     &__inner {
         border: 1px solid $color--white;
         border-radius: $border-radius--small;
         background-color: $color--dark-white;
-        padding: $spacer--32;
+        padding: $spacer--16;
 
-        @include bp-tablet-down {
+        @include bp-mobile-up {
             padding: $spacer--24;
         }
 
-        @include bp-tablet-down {
-            padding: $spacer--16;
+        @include bp-tablet-up {
+            padding: $spacer--32;
         }
     }
 
