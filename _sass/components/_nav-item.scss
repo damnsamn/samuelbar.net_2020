@@ -14,11 +14,9 @@
             position: absolute;
             top: calc(100% + 0.075em);
             left: 0;
-            // right: 0;
             right: 100%;
             background-color: $color__text;
             height: 2px;
-            // height: 0;
             border-radius: 1000px;
             transition: $transition--short;
         }
@@ -30,7 +28,7 @@
 
     @include hover-focus {
         &::after {
-            // height: 2px;
+            // height: 2px
             right: 0;
         }
     }

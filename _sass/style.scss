@@ -7,9 +7,10 @@
 @import "../assets/lib/bootstrap-5.0.0-beta1/scss/helpers";
 // "../assets/lib/bootstrap-5.0.0-beta1/scss/grid" is imported in _overrides.scss
 
+@import 'variables';
+
 @import 'overrides';
 
-@import 'variables';
 @import 'mixins';
 @import 'utilities';
 @import 'global';
