@@ -1,5 +1,5 @@
 .intro {
-    @include component-margin(top); // This is section rather than padding to
+    @include component-margin(top);
     @include component-margin(bottom);
 
     .col-12 + .col-12 {

@@ -140,12 +140,14 @@ pre.highlight {
     background-color: $color--dark-white;
     padding: 0.5em;
     border-radius: $border-radius--medium;
+    overflow-x: auto;
     > code {
         padding: 0;
     }
 }
 
 code {
+    font-size: 1em;
     padding: 0 0.25em;
     background-color: $color--dark-white;
     color: $color__text--dark;
