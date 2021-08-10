@@ -20,6 +20,6 @@ technologies: {
 
 Although the UX design was done externally, I had oversight over that process and was granted license to make tweaks and changes as necessary during the course of development.
 
-{% include common/image.html alt="Screenshot of a typical search for &quot;Recreation, Leisure & Sports&quot;" src="/assets/images/projects/NED/catalogue-1080x1.png" %}
+{% include common/image.html alt="Screenshot of a typical search for &quot;Recreation, Leisure & Sports&quot;" src="/assets/images/projects/NED/catalogue-1080x1.png" width="16" height="9" %}
 
 We built the new NED site on CS-Cart, which provided a lot of the e-commerce capabilities Indigo required out of the box. My role was to create a from-scratch custom theme for NED (akin to custom WordPress themes).

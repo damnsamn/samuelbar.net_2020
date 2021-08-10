@@ -17,7 +17,7 @@ technologies: {
 }
 ---
 
-{% include common/image.html alt="Screenshot of the City of Mandurah homepage" src="/assets/images/projects/COM/com.png" %}
+{% include common/image.html alt="Screenshot of the City of Mandurah homepage" src="/assets/images/projects/COM/com.png" width="16" height="9" %}
 
 To coincide with the launch of their new brand identity, <a href="https://www.mandurah.wa.gov.au/">City of Mandurah</a> were also looking to launch a brand-new website. With a key objective being to help users to find their desired civic services quicker and easier than ever, while also showcasing all that Mandurah has to offer.
 
