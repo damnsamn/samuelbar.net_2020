@@ -1,13 +1,50 @@
+@keyframes pulse {
+    0% {
+        background-color: rgba($color--dark-white, 0);
+    }
+    50% {
+        background-color: rgba($color--dark-white, 0);
+    }
+    100% {
+        background-color: rgba($color--dark-white, 1);
+    }
+}
+@keyframes ellipsis {
+    0% {
+        content: ".";
+    }
+    50% {
+        content: "..";
+    }
+    100% {
+        content: "...";
+    }
+}
+
 .image {
     text-align: center;
     margin: 0.5em 0;
+    position: relative;
     line-height: 0;
+
+    &::before {
+        content: "";
+        font-weight: $font-weight--bold;
+        animation: 1s linear infinite alternate ellipsis;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 
     &__img {
         width: 100%;
         height: auto;
         border-radius: 3px;
         border: 1px solid $color--dark-white;
+        animation: 1s ease-in-out infinite alternate pulse;
+        position: relative;
+        z-index: 0;
     }
 
     &__caption {
