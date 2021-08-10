@@ -11,7 +11,7 @@ I've spent the last couple of years working as the UX Designer/Developer at Dive
 
 I've been given amazing opportunities to work with big-name clients, such as Optus Stadium and Tourism WA, as well as several state government agencies, and some exciting startups. I take immense pride in having made a positive impact and impression with these clients.
 
-When I'm not working, I love indoor bouldering (rock climbing), playing video games, creative coding, and otherwise procrastinating work on personal/passion projects.
+When I'm not working, I love indoor bouldering (rock climbing), wishing my cats would love me like I love them, playing video games, creative coding, and otherwise procrastinating work on personal/passion projects.
 
 {% include common/cta.html heading="Want to see what I can do?" description="Have a look through some of my prior projects, or pick through some of my often-used code snippets I store on this site for my own (or anyone else’s) repeated use."
 buttons="See Projects, /projects; See Snippets, /snippets, stroke" %}
