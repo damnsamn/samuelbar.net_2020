@@ -1,0 +1,35 @@
+@mixin pseudo-border-dashed($size, $weight, $color, $radius: 0px) {
+  overflow: hidden;
+  position: relative;
+
+  &::before {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    top: -$size + $weight;
+    bottom: -$size + $weight;
+    left: -$size + $weight;
+    right: -$size + $weight;
+    border-radius: $radius + ($size - $weight);
+    border: $size dashed $color;
+  }
+}
+
+.box {
+  padding-top: 100%;
+  border-radius: 20px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+
+  &.dash {
+    @include pseudo-border-dashed(20px, 5px, $color--light-blue, 20px);
+    background-color: $color--dark-blue;
+    overflow: visible;
+    border: 1px solid red;
+  }
+
+  &.pseudo-dash {
+    @include pseudo-border-dashed(20px, 5px, $color--light-blue, 20px);
+    background-color: $color--dark-blue;
+  }
+}

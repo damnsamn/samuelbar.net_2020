@@ -16,7 +16,7 @@ technologies: {
 ---
 {% include common/image.html alt="The homepage for Indigo's National Equipment Database, with a large banner image and a central search bar" src="/assets/images/projects/NED/askned-1080x1.png" %}
 
-<a href="https://www.indigosolutions.org.au/">Indigo Solutions</a> were looking to replace and upgrade their National Equipment Database (NED) - a database of Assitive Technology products and their suppliers across Australia. They wanted to transition to more of an e-commerce model, connecting suppliers and consumers directly through their platform.
+[Indigo Solutions](https://www.indigosolutions.org.au/) were looking to replace and upgrade their National Equipment Database (NED) - a database of Assitive Technology products and their suppliers across Australia. They wanted to transition to more of an e-commerce model, connecting suppliers and consumers directly through their platform.
 
 Although the UX design was done externally, I had oversight over that process and was granted license to make tweaks and changes as necessary during the course of development.
 

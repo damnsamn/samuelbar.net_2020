@@ -26,7 +26,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    line-height: 1.4;
+    line-height: 1.5;
     * {
         box-sizing: border-box;
     }
@@ -84,7 +84,8 @@ main.content {
 }
 
 p {
-    margin: 1.5em 0;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
     &:first-child {
         margin-top: 0;
     }
@@ -147,10 +148,12 @@ pre.highlight {
 }
 
 code {
+    font-family: inherit;
     font-size: 1em;
     padding: 0 0.25em;
     background-color: $color--dark-white;
     color: $color__text--dark;
+    white-space: nowrap;
 }
 
 em {
@@ -162,6 +165,11 @@ a {
     color: $color__text--dark;
     text-decoration: none;
     border-bottom: 1px dashed;
+
+    @include hover-focus {
+        color: $color__text;
+        border-bottom-style: solid;
+    }
 }
 
 img {
