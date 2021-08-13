@@ -14,7 +14,7 @@ The trouble is, we have *nowhere near* this level of control in native CSS. It w
 
 {% include common/gist.html id=page.gist %}
 
-Essentially, it works because browsers will (reliably, if not consistently) scale up their dash and gap lengths in proportion with the `border-width` value. We can exploit this by styling a pseudo-element with a `border-width` of what we want our dash length to be, offset its position by what we want the stroke weight to be, and then clip out the undesired thickness by using `overflow: hidden`. We also do some additional calculation of `border-radius`, if provided with one, to maintain a uniform weight around rounded corners.
+Essentially, it works because browsers will (reliably, if not in the exact same ways) scale up their dash and gap lengths in proportion with the `border-width` value. We can exploit this by styling a pseudo-element with a `border-width` of what we want our dash length to be, offset its position by what we want the stroke weight to be, and then clip out the undesired thickness by using `overflow: hidden`. We also do some additional calculation of `border-radius`, if provided with one, to maintain a uniform weight around rounded corners.
 
 Below is an example of a large `20px` `border-width`, which is then clipped down to `5px` in weight while maintaining the `20px` dash/gap length.
 
