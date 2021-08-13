@@ -12,7 +12,7 @@ I've spent the last couple of years working as the UX Designer/Developer at Dive
 
 I've been given amazing opportunities to work with big-name clients, such as Optus Stadium and Tourism WA, as well as several state government agencies, and some exciting startups. I take immense pride in having made a positive impact and impression with these clients.
 
-When I'm not working, I'll be indoor bouldering (rock climbing), playing video games, wishing my cats would love me like I love them, creative coding, or otherwise procrastinating work on personal/passion projects.
+When I'm not working, I'll be indoor bouldering (rock climbing), playing video games, wishing my cats would love me like I love them, creative coding, or otherwise procrastinating work on personal/passion projects. I have an unreasonable love for writing RegEx find/replace patterns.
 
 <div class="row">
     {% include common/image.html class="col-12 col-sm-6" src="/assets/images/about/kittens-1-800sq.jpg" height="1" width="1" alt="" %}
