@@ -15,11 +15,14 @@ I've been given amazing opportunities to work with big-name clients, such as Opt
 When I'm not working, I'll be indoor bouldering (rock climbing), playing video games, wishing my cats would love me like I love them, creative coding, or otherwise procrastinating work on personal/passion projects. I have an unreasonable love for writing RegEx find/replace patterns.
 
 <div class="row">
-    <div class="col-12 col-sm-6">
-        {% include common/image-lightbox.html class="mx-auto" id="img-1" thumb="/assets/images/about/kittens-1-800sq.jpg" src="/assets/images/about/kittens-1.jpg" alt="Two very beautiful kittens, cuddling in a carrying cage" width="3" height="4" %}
+    <div class="col-12 col-sm-6 col-lg-4">
+        {% include common/image-lightbox.html class="mx-auto" id="img-1" thumb="/assets/images/about/climb-timb-800w.jpg" src="/assets/images/about/climb-timb.jpg" alt="Myself climbing, looking very strong and impressive - wow!" width="1" height="1" %}
     </div>
-    <div class="col-12 col-sm-6">
-        {% include common/image-lightbox.html class="mx-auto" id="img-2" thumb="/assets/images/about/kittens-3-800sq.jpg" src="/assets/images/about/kittens-3.jpg" alt="Ginger kitten laying on the couch, paws extended, looking proudly at the camera" width="3" height="4" %}
+    <div class="col-12 col-sm-6 col-lg-4">
+        {% include common/image-lightbox.html class="mx-auto" id="img-2" thumb="/assets/images/about/kittens-1-800sq.jpg" src="/assets/images/about/kittens-1.jpg" alt="Two very beautiful kittens, cuddling in a carrying cage" width="3" height="4" %}
+    </div>
+    <div class="col-12 col-sm-6 col-lg-4">
+        {% include common/image-lightbox.html class="mx-auto" id="img-3" thumb="/assets/images/about/kittens-3-800sq.jpg" src="/assets/images/about/kittens-3.jpg" alt="Ginger kitten laying on the couch, paws extended, looking proudly at the camera" width="3" height="4" %}
     </div>
 </div>
 
