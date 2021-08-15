@@ -20,7 +20,7 @@
         align-items: center;
         flex-wrap: wrap;
 
-        @include bp-mobile-down {
+        @include bp-tablet-down {
             flex-direction: column;
         }
     }
@@ -53,7 +53,7 @@
     &__navigation {
         display: flex;
         align-items: center;
-        @include bp-mobile-down {
+        @include bp-tablet-down {
             flex-direction: column;
             text-align: center;
 
@@ -72,11 +72,11 @@
         justify-content: flex-end;
         margin: $spacer--32 0 0 0;
 
-        @include bp-mobile-down {
+        @include bp-tablet-down {
             text-align: center;
             align-self: center;
         }
-        @include bp-mobile-up {
+        @include bp-tablet-up {
             margin: 0 0 0 auto;
         }
     }

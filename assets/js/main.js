@@ -125,7 +125,7 @@ var userIsTabbing;
 
 (function doTooltips() {
 
-    $("[data-tooltip]").each(function() {
+    $("[data-tooltip]").each(function () {
         $(this).attr("aria-label", $(this).data("tooltip"));
     })
 
@@ -154,3 +154,60 @@ var userIsTabbing;
     $("[data-tooltip]").mouseleave(closeTooltips)
 
 })();
+
+(function lightbox($) {
+
+    $("[data-lightbox]").each(function () {
+        var $openButton = $(this),
+            id = $(this).data("lightbox"),
+            $lightbox = $("#" + id),
+            $closeButton = $lightbox.find(".lightbox__close"),
+            fadeT = 150,
+            $startTabTrap,
+            $endTabTrap,
+            $tabbables;
+
+        if ($lightbox.length) {
+            $lightbox.addClass("initialised").hide();
+
+            // Trap focus to lightbox - no focussing outside lightbox
+            $lightbox
+                .prepend('<span tabindex="0" id="startTabTrap-' + id + '"></span>')
+                .append('<span tabindex="0" id="endTabTrap-' + id + '"></span>');
+
+
+            $startTabTrap = $("#startTabTrap-" + id);
+            $endTabTrap = $("#endTabTrap-" + id);
+
+            $openButton.click(function () {
+                $("html").addClass("no-scroll");
+                $lightbox.fadeIn(fadeT, function () {
+                    $tabbables[0].focus();
+                });
+                $tabbables = $lightbox.find(':tabbable').filter((index, el) =>
+                    el.id !== $startTabTrap[0].id && el.id !== $endTabTrap[0].id
+                );
+
+                // On focussing $startTabTrap, change focus to last $tabbables element
+                $startTabTrap.focus(()=>$tabbables[$tabbables.length-1].focus())
+                // On focussing $endTabTrap, change focus to first $tabbables element
+                $endTabTrap.focus(()=>$tabbables[0].focus())
+            })
+
+            $closeButton.click(function () {
+                $("html").removeClass("no-scroll");
+                $lightbox
+                    .fadeOut(fadeT, function () {
+                        $(this).find("video, iframe").each(function () {
+                            var src = $(this).attr("src");
+                            $(this).attr("src", "");
+                            $(this).attr("src", src);
+                        });
+                        $openButton.focus();
+                    })
+
+            })
+
+        }
+    })
+})(jQuery);

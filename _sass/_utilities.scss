@@ -1,3 +1,7 @@
 .sr-only {
     @extend .visually-hidden;
 }
+
+.no-scroll {
+    overflow-y: hidden;
+}
