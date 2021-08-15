@@ -1,0 +1,18 @@
+
+{% capture thumbAlt %}Enlarge Image: {{include.alt}}{% endcapture %}
+
+<button class="lightbox-trigger" data-lightbox="{{include.id}}">
+  {% include common/image.html src=include.thumb height="1" width="1" alt=thumbAlt %}
+</button>
+
+<div class="lightbox" id="{{include.id}}">
+  <div class="container">
+    <button class="lightbox__close">
+      <span class="sr-only">Close Dialog</span>
+      <span class="fas fa-times"></span>
+    </button>
+    <div class="lightbox__content text-center">
+      <img src="{{include.src}}" alt="{{include.alt}}">
+    </div>
+  </div>
+</div>

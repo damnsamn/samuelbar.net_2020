@@ -15,8 +15,12 @@ I've been given amazing opportunities to work with big-name clients, such as Opt
 When I'm not working, I'll be indoor bouldering (rock climbing), playing video games, wishing my cats would love me like I love them, creative coding, or otherwise procrastinating work on personal/passion projects. I have an unreasonable love for writing RegEx find/replace patterns.
 
 <div class="row">
-    {% include common/image.html class="col-12 col-sm-6" src="/assets/images/about/kittens-1-800sq.jpg" height="1" width="1" alt="" %}
-    {% include common/image.html class="col-12 col-sm-6" src="/assets/images/about/kittens-3-800sq.jpg" height="1" width="1" alt=""  %}
+    <div class="col-12 col-sm-6">
+        {% include common/image-lightbox.html id="img-1" thumb="/assets/images/about/kittens-1-800sq.jpg" src="/assets/images/about/kittens-1-800w.jpg" alt="baby boys uwu" %}
+    </div>
+    <div class="col-12 col-sm-6">
+        {% include common/image-lightbox.html id="img-2" thumb="/assets/images/about/kittens-3-800sq.jpg" src="/assets/images/about/kittens-3-800w.jpg" alt="baby boys uwu" %}
+    </div>
 </div>
 
 {% include common/cta.html heading="Want to see what I can do?" description="Have a look through some of my prior projects, or pick through some of my often-used code snippets I store on this site for my own (or anyone else’s) repeated use."
