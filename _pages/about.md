@@ -16,10 +16,10 @@ When I'm not working, I'll be indoor bouldering (rock climbing), playing video g
 
 <div class="row">
     <div class="col-12 col-sm-6">
-        {% include common/image-lightbox.html id="img-1" thumb="/assets/images/about/kittens-1-800sq.jpg" src="/assets/images/about/kittens-1-800w.jpg" alt="baby boys uwu" %}
+        {% include common/image-lightbox.html class="mx-auto" id="img-1" thumb="/assets/images/about/kittens-1-800sq.jpg" src="/assets/images/about/kittens-1.jpg" alt="Two very beautiful kittens, cuddling in a carrying cage" width="3" height="4" %}
     </div>
     <div class="col-12 col-sm-6">
-        {% include common/image-lightbox.html id="img-2" thumb="/assets/images/about/kittens-3-800sq.jpg" src="/assets/images/about/kittens-3-800w.jpg" alt="baby boys uwu" %}
+        {% include common/image-lightbox.html class="mx-auto" id="img-2" thumb="/assets/images/about/kittens-3-800sq.jpg" src="/assets/images/about/kittens-3.jpg" alt="Ginger kitten laying on the couch, paws extended, looking proudly at the camera" width="3" height="4" %}
     </div>
 </div>
 

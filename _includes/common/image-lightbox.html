@@ -11,8 +11,8 @@
       <span class="sr-only">Close Dialog</span>
       <span class="fas fa-times"></span>
     </button>
-    <div class="lightbox__content text-center">
-      <img src="{{include.src}}" alt="{{include.alt}}">
+    <div class="lightbox__content">
+      {% include common/image.html src=include.src class=include.class alt=include.alt width=include.width height=include.height %}
     </div>
   </div>
 </div>
