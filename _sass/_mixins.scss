@@ -33,7 +33,8 @@
 
 @mixin unstyle-link {
     color: inherit;
-    border: none;
+    border: 0 none;
+    text-decoration: none;
 }
 
 // Apply a pseudo-element background

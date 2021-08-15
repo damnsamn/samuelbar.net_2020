@@ -161,10 +161,10 @@ em {
     font-weight: $font-weight--bold;
 }
 
-a {
+a:not([class]) {
     color: $color__text--dark;
-    text-decoration: none;
     border-bottom: 1px dashed;
+    text-decoration: none;
 
     @include hover-focus {
         color: $color__text;

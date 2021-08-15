@@ -45,8 +45,8 @@
             color: $color--white;
             padding: $spacer--8;
             font-size: rem(26px);
-            border: none;
             line-height: 1;
+            @include unstyle-link;
         }
     }
 
