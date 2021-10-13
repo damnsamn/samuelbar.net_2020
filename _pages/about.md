@@ -8,7 +8,7 @@ permalink: /about
 
 # Like I was saying...
 
-I've spent the last couple of years working as the UX Designer/Developer at Diversus - a software consultancy based in West Perth. Typically I'm brought in to provide end-to-end UX design and front-end development expertise for a project, ensuring that the UX and front-end match up and the needs of each can be met at each stage of the process.
+I'm currently working as a Front-end Developer at [Humaan](https://humaan.com/) - a creative digital agency based in Perth. With a UX/UI skillset in addition to the front-end development, I'm assisting both with the front-end implementations for projects as well as assisting the UX team ensuring that the UX and front-end match up and the needs of each can be met at each stage of the process.
 
 I've been given amazing opportunities to work with big-name clients, such as Optus Stadium and Tourism WA, as well as several state government agencies, and some exciting startups. I take immense pride in having made a positive impact and impression with these clients.
 
